@@ -379,6 +379,10 @@ img {
 
 /* UTILITIES */
 
+.mt-0 {
+	margin-top: 8px;
+}
+
 .mt-1 {
 	margin-top: 8px;
 }
