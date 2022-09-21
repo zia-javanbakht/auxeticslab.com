@@ -27,10 +27,12 @@
 	/* Glyphs */
 	--glyph-nearrow: "\2197";
 	--glyph-rarrow: "\2192";
+	--glyph-email: "\2709";
 
 	/* Grid */
 	--grid-col-offset: 1;
 	--grid-col-count: 12;
+
 }
 
 * {
@@ -167,6 +169,20 @@ b {
 	margin-left: 4px;
 }
 
+.link-email {
+	color: var(--color-red);
+	text-decoration: none;
+}
+
+.link-email::after {
+	content: var(--glyph-email);
+	margin-left: 4px;
+}
+
+
+
+
+
 .link-footer {
 	color: var(--color-black);
 	text-decoration: none;
@@ -182,13 +198,22 @@ img {
 	margin-bottom: 16px;
 }
 
+.img-border {
+	max-width: 100%;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	border: 1px solid var(--color-black);	
+}
+
 .member-portrait {
 	aspect-ratio: var(--member-portrait-aspect-ratio);
 	width: 100%;
-
+	border: 1px solid var(--color-black);
 	object-fit: cover;
 	object-position: left;
 }
+
+
 
 /* LISTS */
 
