@@ -69,6 +69,12 @@ body {
 
 /* TEXT */
 
+.text-size-caption {
+	font-size: calc(0.4*var(--text-size-large));
+	line-height: var(--text-height-base);
+}
+
+
 .text-size-1 {
 	font-size: calc(0.6*var(--text-size-base));
 	line-height: var(--text-height-base);
@@ -122,6 +128,18 @@ b {
 	font-weight: var(--text-weight-regular);
 }
 
+/* Text alignment */
+
+.text-center {
+	text-align: center;
+}
+
+/* Image */
+.img-caption {
+	display: block;
+}
+
+/* Links */
 .link-logo {
 	font-weight: var(--text-weight-bold);
 	text-decoration: none;
@@ -157,6 +175,11 @@ b {
 	color: var(--color-red);
 	padding-bottom: 2px;
 	border-bottom: 2px solid var(--color-red);
+}
+
+.link-external-simple {
+	color: var(--color-red);
+	text-decoration: none;
 }
 
 .link-external {
