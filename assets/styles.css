@@ -228,6 +228,14 @@ img {
 	border: 1px solid var(--color-black);
 }
 
+.img-border-pad {
+	max-width: 100%;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	border: 1px solid var(--color-black);
+	Padding: 4px;
+}
+
 .member-portrait {
 	aspect-ratio: var(--member-portrait-aspect-ratio);
 	width: 100%;
@@ -240,6 +248,12 @@ img {
 
 /* LISTS */
 
+.enum-list {
+	list-style-type: decimal;
+	padding-left: 25px
+}
+
+
 .no-bullets {
 	list-style: none;
 }
@@ -248,6 +262,10 @@ img {
 	margin-left: 30px;
 }
 
+.compact {
+	display: flex;
+	padding-left: 20px
+}
 
 .cell {
 	padding-top: 8px;
