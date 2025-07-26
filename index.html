@@ -18,6 +18,17 @@
 					link.classList.add('active');
 				}
 			});
+
+			// Load footer
+			fetch('footer.html')
+				.then(response => response.text())
+				.then(data => {
+					const footerContainer = document.getElementById('footer-container');
+					if (footerContainer) {
+						footerContainer.innerHTML = data;
+					}
+				})
+				.catch(error => console.error('Error loading footer:', error));
 		});
 	</script>
 </head>
@@ -67,10 +78,10 @@
 
 			<div class="grid">
 				<div class="gc-start-1 gc-end-13 text-size-2 text-serif">
-					<p class="text-size-1 text-center text-serif">
-						<q class="text-size-2 text-serif">Science is what we understand well enough to explain to a
+					<p class="text-center text-mono">
+						<q class="quote-mono">Science is what we understand well enough to explain to a
 							computer; art is
-							all the rest.</q>
+							all the rest. </q>
 						- Donald Knuth
 					</p>
 				</div>
@@ -86,8 +97,8 @@
 			</div>
 
 			<div class="grid">
-				<div class="gc-start-1 gc-end-4 text-weight-bold">
-					About Auxetics Lab
+				<div class="gc-start-1 gc-end-4 title-small" style="text-transform: none;">
+					about Auxetics LAB
 				</div>
 				<div class="gc-start-4 gc-end-13">
 					<p>
@@ -109,7 +120,7 @@
 			</div>
 
 			<div class="grid">
-				<div class="gc-start-1 gc-end-4 text-weight-bold">
+				<div class="gc-start-1 gc-end-4 title-small">
 					Aim
 				</div>
 				<div class="gc-start-4 gc-end-13">
@@ -123,7 +134,7 @@
 			</div>
 
 			<div class="grid">
-				<div class="gc-start-1 gc-end-4 text-weight-bold">
+				<div class="gc-start-1 gc-end-4 title-small">
 					Research Focus
 				</div>
 				<div class="gc-start-4 gc-end-13">
@@ -141,7 +152,7 @@
 			</div>
 
 			<div class="grid">
-				<div class="gc-start-1 gc-end-4 text-weight-bold">
+				<div class="gc-start-1 gc-end-4  title-small">
 					Team
 				</div>
 				<div class="gc-start-4 gc-end-13">
@@ -158,18 +169,7 @@
 				</div>
 			</div>
 
-			<div class="grid">
-				<div class="gc-start-1 gc-end-13">
-					<div class="footer-left">
-						&copy; 2022–2025 AuxeticsLab. All Rights Reserved.
-					</div>
-					<ul class="no-bullets flex flex-row flex-gap-1">
-
-						<li><a class="link-footer" href="contact.html">Privacy Statement and Disclaimer</a></li>
-
-					</ul>
-				</div>
-			</div>
+			<div id="footer-container"></div>
 		</div>
 	</main>
 </body>
