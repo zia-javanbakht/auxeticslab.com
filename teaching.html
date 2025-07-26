@@ -2,17 +2,16 @@
 <html>
 
 <head>
-	<title>Auxetics Lab | Teaching</title>
+	<title>Auxetics LAB | Teaching</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/fonts/inter.css">
 	<link rel="stylesheet" href="assets/styles.css">¯
 	<script>
-		document.addEventListener('DOMContentLoaded', function() {
+		document.addEventListener('DOMContentLoaded', function () {
 			const navLinks = document.querySelectorAll('.link-navigation');
 			const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-			
+
 			navLinks.forEach(link => {
 				link.classList.remove('active');
 				if (link.getAttribute('href') === currentPage) {
@@ -27,169 +26,201 @@
 	<header class="header-fixed">
 		<div class="content">
 			<div class="grid border-bottom">
-			<div class="gc-start-1 gc-end-4"><a class="link-logo" href="/">Auxetics Lab</a></div>
-			<div class="gc-start-4 gc-end-10">
-				Mechanical Engineering and Industrial Design<br />
-				<a class="link-external-simple"
-					href="http://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment"
-					target="http://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment">School of
-					Engineering and Built
-					Environment</a>
+				<div class="gc-start-1 gc-end-4"><a class="link-logo title-large" href="/">Auxetics LAB</a></div>
+				<div class="gc-start-5 gc-end-10">
+					Mechanical Engineering and Industrial Design<br />
+					<a class="link-external-simple"
+						href="http://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment"
+						target="http://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment">School
+						of
+						Engineering and Built
+						Environment</a>
+				</div>
+				<div class="gc-start-10 gc-end-13">
+					<a class="link-external-simple" href="https://www.griffith.edu.au/"
+						target="https://www.griffith.edu.au/">Griffith University</a><br />
+					Gold Coast QLD, Australia
+				</div>
+				<div class="gc-start-1 gc-end-13 mt-1">
+					<a class="link-navigation" href="index.html">Home</a>
+					<a class="link-navigation" href="research.html">Research</a>
+					<a class="link-navigation" href="publications.html">Publications</a>
+					<a class="link-navigation active" href="teaching.html">Teaching</a>
+					<a class="link-navigation" href="resources.html">Resources</a>
+					<a class="link-navigation" href="people.html">People</a>
+					<a class="link-navigation" href="positions.html">Positions</a>
+					<a class="link-navigation" href="contact.html">Contact</a>
+				</div>
 			</div>
-			<div class="gc-start-10 gc-end-13">
-				<a class="link-external-simple" href="https://www.griffith.edu.au/"
-					target="https://www.griffith.edu.au/">Griffith University</a><br />
-				Gold Coast QLD, Australia
-			</div>
-			<div class="gc-start-1 gc-end-13 mt-1">
-				<a class="link-navigation" href="index.html">Home</a>
-				<a class="link-navigation" href="research.html">Research</a>
-				<a class="link-navigation" href="publications.html">Publications</a>
-				<a class="link-navigation active" href="teaching.html">Teaching</a>
-				<a class="link-navigation" href="resources.html">Resources</a>
-				<a class="link-navigation" href="people.html">People</a>
-				<a class="link-navigation" href="positions.html">Positions</a>
-				<a class="link-navigation" href="contact.html">Contact</a>
-			</div>
-		</div>
 	</header>
 	<main class="main-content">
 		<div class="content">
 			<div class="grid">
-			<div class="gc-start-1 gc-end-13 text-size-2 text-serif">
-				<p class="text-size-1 text-center text-serif">
-					<q class="text-size-2 text-serif">Poor is the pupil who does not surpass his master.</q>
-					- Leonardo da
-					Vinci
-				</p>
+				<div class="gc-start-1 gc-end-13 text-size-2 text-serif">
+					<p class="text-size-1 text-center text-serif">
+						<q class="text-size-2 text-serif">Poor is the pupil who does not surpass his master.</q>
+						- Leonardo da
+						Vinci
+					</p>
+				</div>
 			</div>
+
+			<div class="grid">
+
+
+				<div class="gc-start-1 gc-end-13 text-size-2 text-serif text-color-red  mt-3">
+					Current Courses
+				</div>
+				<div class="gc-start- gc-end-12 space-between">
+					<p class="text-weight-bold space-between"> Constitutive Material Modelling (7015ENG) </p>
+					Current progress in the field of mechanics is mostly because of the developments in manufacturing
+					and innovations in new materials, e.g., metamaterials and liquid crystals. Most of the current
+					research in Structural and Mechanical Engineering is devoted to accurate modelling of material
+					behaviour. These progresses require formulating constitutive material models to capture the response
+					of the structure accurately. The essential tool for formulating the constitutive behaviour is
+					Continuum Mechanics (CM). CM provides the required formulation of continuous media (e.g., solids and
+					fluids) under external stimuli (e.g., mechanical loads, thermal variations, electromagnetic fields,
+					etc). With the provided theory, kinematics and equilibrium equations are shared between most
+					materials and the only required part would be the material model. Obtaining a deep understanding of
+					CM requires some mathematical tools without which a complete picture of the subject is lost. Tensor
+					algebra is an abstract tool which unlocks a deep understanding of various field theories including
+					continuum mechanics. This course provides the foundation for understanding material models in
+					engineering. Elementary tensor calculus and continuum mechanics will be used to understand the
+					formulation of constitutive material models. After understanding the role and context of each
+					material model, calibration of models using experimental data will be discussed. The provided
+					fundamental knowledge will be essential for many practical courses like computational
+					statics/dynamics, computational fluid dynamics, nonlinear finite element analysis.
+					<p>The following topics are covered in this course:
+					<ol class="enum-list flex-gap-1">
+						<li>Mathematical preliminaries (operator and set theories),</li>
+						<li>Tensor algebra and calculus, </li>
+						<li>Kinematics of Cauchy continua, </li>
+						<li>Kinetics, </li>
+						<li>Conservation laws, </li>
+						<li>Boundary value problems, and</li>
+						<li>Constitutive material behaviour (elasticity, elastoplasticity, and viscoelasticity).</li>
+					</ol>
+
+
+					<p>
+						See the <a class="link-external-simple"
+							href="https://www.griffith.edu.au/study/courses/constitutive-material-modelling-7015ENG#trimester-2-gold-coast-campus"
+							target="https://www.griffith.edu.au/study/courses/constitutive-material-modelling-7015ENG#trimester-2-gold-coast-campus">Course
+							Profile</a>
+						for more
+						information.
+					</p>
+				</div>
+
+
+				<div class="gc-start- gc-end-12 space-between">
+					<p class="text-weight-bold space-between"> Computational Statics and Dynamics (7252ENG) </p>
+					The finite element method is regarded nowadays as the standard tool to solve engineering problems in
+					the
+					industrial and academic context. A significant contribution to the success of this method is based
+					on the
+					development of powerful computer hard and software during the last decades. Many user-friendly
+					commercial
+					packages are available which allow the numerical treatment of real engineering problems on personal
+					computers
+					or
+					even notebooks. The method itself integrates the basic knowledge of engineering materials,
+					mathematics,
+					mechanics (statics and dynamics), computing and programming, and computer-aided design that students
+					would
+					acquire in the first two years of their undergraduate studies. The problem of determining forces and
+					displacements, stresses and strains or the vibrational behaviour is fundamental to many applied
+					areas of
+					mechanical engineering including transportation (automotive, aviation, or naval structures) or plant
+					engineering. This course presents continuum mechanical basics and computational algorithms that are
+					used to
+					analyse engineering components and structures under arbitrary loading conditions. Furthermore,
+					students will
+					gain skills in the use of a state-of-the-art finite element analysis package to further deepen their
+					knowledge
+					in the areas of stress/strain analysis and dynamical behaviour. However, only who thoroughly
+					understands the
+					finite element theory, concepts and involved algorithms will be able to obtain reliable and
+					realistic results
+					from this powerful method. The ability to critically analyse and interpret numerically obtained
+					results is a
+					prerequisite for the responsible application of this method in any engineering field.
+					<p> See the <a class="link-external-simple"
+							href="https://www.griffith.edu.au/study/courses/computational-statics-and-dynamics-6522ENG"
+							target="https://www.griffith.edu.au/study/courses/computational-statics-and-dynamics-6522ENG">Course
+							Profile</a>
+						for more
+						information.</p>
+				</div>
+
+
+
+
+
+				<div class="gc-start-1 gc-end-13 text-size-2 text-serif text-color-red">
+					Previous Course
+				</div>
+
+
+
+
+
+
+				<div class="gc-start- gc-end-12 space-between">
+					<p class="text-weight-bold">Engineering Materials (1017ENG)</p>
+					<p>The following topics are covered in this course:
+					<ol class="enum-list flex-gap-1">
+						<li>Introduction to Engineering Materials, </li>
+						<li>Atomic Structure and Interatomic Bonding, </li>
+						<li>Structure of Crystalline Solids, </li>
+						<li>Properties of Metals, </li>
+						<li>Failure of metals </li>
+						<li>Metallurgy basics</li>
+						<li>Ceramics, </li>
+						<li>Polymers, </li>
+						<li>Composites, </li>
+						<li>Corrosion and Degradation,</li>
+						<li>Electrical Properties of Materials, and</li>
+						<li>Literature review workshop.</li>
+					</ol>
+
+					The course considers the fundamental properties of metals and non-metallic materials. Students are
+					introduced
+					to
+					the atomic and microstructure of materials and their relationship to mechanical and electrical
+					properties. The
+					course explores the mechanical concepts of stress, strain, elongation and material failure
+					(including testing)
+					and the phenomenon of electrical conduction.<p> See the <a class="link-external-simple"
+							href="https://www.griffith.edu.au/study/courses/engineering-materials-1017ENG"
+							target="https://www.griffith.edu.au/study/courses/engineering-materials-1017ENG">Course
+							Profile</a> for more
+						information.
+					</p>
+
+
+				</div>
+
+			</div>
+
+
 		</div>
+
+
+
+
+
 
 		<div class="grid">
+			<div class="gc-start-1 gc-end-13">
+				<div class="footer-left">
+					&copy; 2022–2025 AuxeticsLab. All Rights Reserved.
+				</div>
+				<ul class="no-bullets flex flex-row flex-gap-1">
 
+					<li><a class="link-footer" href="contact.html">Privacy Statement and Disclaimer</a></li>
 
-      <div class="gc-start-1 gc-end-13 text-size-2 text-serif text-color-red  mt-3">
-        Current Courses
-      </div>
-      <div class="gc-start- gc-end-12 space-between">
-      <p class="text-weight-bold space-between"> Constitutive Material Modelling (7015ENG) </p>
-      Current progress in the field of mechanics is mostly because of the developments in manufacturing and innovations in new materials, e.g., metamaterials and liquid crystals. Most of the current research in Structural and Mechanical Engineering is devoted to accurate modelling of material behaviour. These progresses require formulating constitutive material models to capture the response of the structure accurately. The essential tool for formulating the constitutive behaviour is Continuum Mechanics (CM). CM provides the required formulation of continuous media (e.g., solids and fluids) under external stimuli (e.g., mechanical loads, thermal variations, electromagnetic fields, etc). With the provided theory, kinematics and equilibrium equations are shared between most materials and the only required part would be the material model. Obtaining a deep understanding of CM requires some mathematical tools without which a complete picture of the subject is lost. Tensor algebra is an abstract tool which unlocks a deep understanding of various field theories including continuum mechanics. This course provides the foundation for understanding material models in engineering. Elementary tensor calculus and continuum mechanics will be used to understand the formulation of constitutive material models. After understanding the role and context of each material model, calibration of models using experimental data will be discussed. The provided fundamental knowledge will be essential for many practical courses like computational statics/dynamics, computational fluid dynamics, nonlinear finite element analysis.
-      <p>The following topics are covered in this course:
-				<ol class="enum-list flex-gap-1">
-          <li>Mathematical preliminaries (operator and set theories),</li>
-					<li>Tensor algebra and calculus, </li>
-					<li>Kinematics of Cauchy continua, </li>
-					<li>Kinetics, </li>
-					<li>Conservation laws, </li>
-					<li>Boundary value problems, and</li>
-					<li>Constitutive material behaviour (elasticity, elastoplasticity, and viscoelasticity).</li>
-				</ol>
-
-
-<p>
-      See the <a
-        class="link-external-simple"
-        href="https://www.griffith.edu.au/study/courses/constitutive-material-modelling-7015ENG#trimester-2-gold-coast-campus"
-        target="https://www.griffith.edu.au/study/courses/constitutive-material-modelling-7015ENG#trimester-2-gold-coast-campus">Course
-        Profile</a>
-      for more
-      information.
-    </p>
-    </div>
-
-
-      <div class="gc-start- gc-end-12 space-between">
-      <p class="text-weight-bold space-between"> Computational Statics and Dynamics (6522ENG) </p>
-      The finite element method is regarded nowadays as the standard tool to solve engineering problems in the
-      industrial and academic context. A significant contribution to the success of this method is based on the
-      development of powerful computer hard and software during the last decades. Many user-friendly commercial
-      packages are available which allow the numerical treatment of real engineering problems on personal computers
-      or
-      even notebooks. The method itself integrates the basic knowledge of engineering materials, mathematics,
-      mechanics (statics and dynamics), computing and programming, and computer-aided design that students would
-      acquire in the first two years of their undergraduate studies. The problem of determining forces and
-      displacements, stresses and strains or the vibrational behaviour is fundamental to many applied areas of
-      mechanical engineering including transportation (automotive, aviation, or naval structures) or plant
-      engineering. This course presents continuum mechanical basics and computational algorithms that are used to
-      analyse engineering components and structures under arbitrary loading conditions. Furthermore, students will
-      gain skills in the use of a state-of-the-art finite element analysis package to further deepen their knowledge
-      in the areas of stress/strain analysis and dynamical behaviour. However, only who thoroughly understands the
-      finite element theory, concepts and involved algorithms will be able to obtain reliable and realistic results
-      from this powerful method. The ability to critically analyse and interpret numerically obtained results is a
-      prerequisite for the responsible application of this method in any engineering field.
-      <p> See the <a
-        class="link-external-simple"
-        href="https://www.griffith.edu.au/study/courses/computational-statics-and-dynamics-6522ENG"
-        target="https://www.griffith.edu.au/study/courses/computational-statics-and-dynamics-6522ENG">Course
-        Profile</a>
-      for more
-      information.</p>
-    </div>
-
-
-
-
-
-      <div class="gc-start-1 gc-end-13 text-size-2 text-serif text-color-red">
-				Previous Course
-			</div>
-
-
-
-
-
-
-			<div class="gc-start- gc-end-12 space-between">
-				<p class="text-weight-bold">Engineering Materials (1017ENG)</p>
-				<p>The following topics are covered in this course:
-				<ol class="enum-list flex-gap-1">
-					<li>Introduction to Engineering Materials, </li>
-					<li>Atomic Structure and Interatomic Bonding, </li>
-					<li>Structure of Crystalline Solids, </li>
-					<li>Properties of Metals, </li>
-					<li>Failure of metals </li>
-					<li>Metallurgy basics</li>
-					<li>Ceramics, </li>
-					<li>Polymers, </li>
-					<li>Composites, </li>
-					<li>Corrosion and Degradation,</li>
-					<li>Electrical Properties of Materials, and</li>
-					<li>Literature review workshop.</li>
-				</ol>
-
-				The course considers the fundamental properties of metals and non-metallic materials. Students are introduced
-				to
-				the atomic and microstructure of materials and their relationship to mechanical and electrical properties. The
-				course explores the mechanical concepts of stress, strain, elongation and material failure (including testing)
-				and the phenomenon of electrical conduction.<p> See the <a class="link-external-simple"
-					href="https://www.griffith.edu.au/study/courses/engineering-materials-1017ENG"
-					target="https://www.griffith.edu.au/study/courses/engineering-materials-1017ENG">Course Profile</a> for more
-				information.
-				</p>
-
-
-			</div>
-
-		</div>
-
-
-	</div>
-
-
-
-
-
-
-	<div class="grid">
-		<div class="gc-start-1 gc-end-13">
-			<div class="footer-left">
-				&copy; 2022–2025 AuxeticsLab. All Rights Reserved.
-			</div>
-			<ul class="no-bullets flex flex-row flex-gap-1">
-
-				<li><a class="link-footer" href="contact.html">Privacy Statement and Disclaimer</a></li>
-
-			</ul>
+				</ul>
 			</div>
 		</div>
 	</main>

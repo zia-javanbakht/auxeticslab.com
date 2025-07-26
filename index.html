@@ -2,17 +2,16 @@
 <html>
 
 <head>
-	<title>Auxetics Lab</title>
+	<title>Auxetics LAB</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/fonts/inter.css">
 	<link rel="stylesheet" href="assets/styles.css">¯
 	<script>
-		document.addEventListener('DOMContentLoaded', function() {
+		document.addEventListener('DOMContentLoaded', function () {
 			const navLinks = document.querySelectorAll('.link-navigation');
 			const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-			
+
 			navLinks.forEach(link => {
 				link.classList.remove('active');
 				if (link.getAttribute('href') === currentPage) {
@@ -34,12 +33,13 @@
 	<header class="header-fixed">
 		<div class="content">
 			<div class="grid border-bottom">
-				<div class="gc-start-1 gc-end-4"><a class="link-logo" href="/">Auxetics Lab</a></div>
-				<div class="gc-start-4 gc-end-10">
+				<div class="gc-start-1 gc-end-4"><a class="link-logo title-large" href="/">Auxetics LAB</a></div>
+				<div class="gc-start-5 gc-end-10">
 					Mechanical Engineering and Industrial Design<br />
 					<a class="link-external-simple"
 						href="http://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment"
-						target="http://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment">School of
+						target="http://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment">School
+						of
 						Engineering and Built
 						Environment</a>
 				</div>
@@ -65,102 +65,111 @@
 	<main class="main-content">
 		<div class="content">
 
-		<div class="grid">
-			<div class="gc-start-1 gc-end-13 text-size-2 text-serif">
-				<p class="text-size-1 text-center text-serif">
-					<q class="text-size-2 text-serif">Science is what we understand well enough to explain to a computer; art is
-						all the rest.</q>
-					- Donald Knuth
-				</p>
-			</div>
-
-			<div class="gc-start-1 gc-end-13">
-				<p class="text-center text-size-caption img-caption" style="line-height:1px">
-					<img src="assets/images/index/tensile.jpg" style="display:block">
-					Regularisation of the element deletion technique for the Direct FE² method (3D-printed PLA tensile coupons)
-				</p>
-			</div>
-
-		</div>
-
-		<div class="grid">
-			<div class="gc-start-1 gc-end-4 text-weight-bold">
-				About Auxetics Lab
-			</div>
-			<div class="gc-start-4 gc-end-13">
-				<p>
-					We are a research group with the <a class="link-external-simple"
-						href="http://www.griffith.edu.au/advanced-design-prototyping-technologies-institute"
-						target="http://www.griffith.edu.au/advanced-design-prototyping-technologies-institute">Advanced Design
-						Prototyping Technologies Institute (ADaPT)</a> at
-					<a class="link-external-simple" href="http://www.griffith.edu.au/"
-						target="http://www.griffith.edu.au/">Griffith University</a>.
-
-					We are interested
-					in developing novel high-performance composite and auxetic materials. We try to adopt and extend computational
-					approaches to simulate the material behaviour and improve our
-					understanding.
-				</p>
-			</div>
-		</div>
-
-		<div class="grid">
-			<div class="gc-start-1 gc-end-4 text-weight-bold">
-				Aim
-			</div>
-			<div class="gc-start-4 gc-end-13">
-				<p>
-					We aim to leverage the technology in high-performance materials to improve the quality of human life, develop
-					the industry, and contribute to the Australian economy. We envision high-quality products that
-					are supported by state-of-the-art research to diminish the gap between industry and academia.
-				</p>
-			</div>
-		</div>
-
-		<div class="grid">
-			<div class="gc-start-1 gc-end-4 text-weight-bold">
-				Research Focus
-			</div>
-			<div class="gc-start-4 gc-end-13">
-				<p>
-					Our focus is on developing energy dissipating devices using novel high-performance composite and auxetic
-					materials. We use Industry 4.0 technologies such as additive manufacturing and artificial intelligence to
-					improve the quality of our designs. Our current focus is improving the energy-absorbing characteristics of
-					multi-layer structures.
-				</p>
-				<a class="link-primary" href="research.html">Read more about our Research</a>
-			</div>
-		</div>
-
-		<div class="grid">
-			<div class="gc-start-1 gc-end-4 text-weight-bold">
-				Team
-			</div>
-			<div class="gc-start-4 gc-end-13">
-				<p>
-					Our team has several dedicated team members who collaborate with national and international researchers and
-					industries. Most of our national collaborators are members of <a class="link-external-simple"
-						href="http://www.griffith.edu.au/space/our-people"
-						target="http://www.griffith.edu.au/space/our-people">Griffith
-						Aerospace</a>.
-				</p>
-				<a class="link-primary" href="people.html">Read more about our
-					team</a>
-			</div>
-		</div>
-
-		<div class="grid">
-			<div class="gc-start-1 gc-end-13">
-				<div class="footer-left">
-					&copy; 2022–2025 AuxeticsLab. All Rights Reserved.
+			<div class="grid">
+				<div class="gc-start-1 gc-end-13 text-size-2 text-serif">
+					<p class="text-size-1 text-center text-serif">
+						<q class="text-size-2 text-serif">Science is what we understand well enough to explain to a
+							computer; art is
+							all the rest.</q>
+						- Donald Knuth
+					</p>
 				</div>
-				<ul class="no-bullets flex flex-row flex-gap-1">
 
-					<li><a class="link-footer" href="contact.html">Privacy Statement and Disclaimer</a></li>
+				<div class="gc-start-1 gc-end-13">
+					<p class="text-center text-size-caption img-caption" style="line-height:1px">
+						<img src="assets/images/index/tensile.jpg" style="display:block">
+						Regularisation of the element deletion technique for the Direct FE² method (3D-printed PLA
+						tensile coupons)
+					</p>
+				</div>
 
-				</ul>
 			</div>
-		</div>
+
+			<div class="grid">
+				<div class="gc-start-1 gc-end-4 text-weight-bold">
+					About Auxetics Lab
+				</div>
+				<div class="gc-start-4 gc-end-13">
+					<p>
+						We are a research group with the <a class="link-external-simple"
+							href="http://www.griffith.edu.au/advanced-design-prototyping-technologies-institute"
+							target="http://www.griffith.edu.au/advanced-design-prototyping-technologies-institute">Advanced
+							Design
+							Prototyping Technologies Institute (ADaPT)</a> at
+						<a class="link-external-simple" href="http://www.griffith.edu.au/"
+							target="http://www.griffith.edu.au/">Griffith University</a>.
+
+						We are interested
+						in developing novel high-performance composite and auxetic materials. We try to adopt and extend
+						computational
+						approaches to simulate the material behaviour and improve our
+						understanding.
+					</p>
+				</div>
+			</div>
+
+			<div class="grid">
+				<div class="gc-start-1 gc-end-4 text-weight-bold">
+					Aim
+				</div>
+				<div class="gc-start-4 gc-end-13">
+					<p>
+						We aim to leverage the technology in high-performance materials to improve the quality of human
+						life, develop
+						the industry, and contribute to the Australian economy. We envision high-quality products that
+						are supported by state-of-the-art research to diminish the gap between industry and academia.
+					</p>
+				</div>
+			</div>
+
+			<div class="grid">
+				<div class="gc-start-1 gc-end-4 text-weight-bold">
+					Research Focus
+				</div>
+				<div class="gc-start-4 gc-end-13">
+					<p>
+						Our focus is on developing energy dissipating devices using novel high-performance composite and
+						auxetic
+						materials. We use Industry 4.0 technologies such as additive manufacturing and artificial
+						intelligence to
+						improve the quality of our designs. Our current focus is improving the energy-absorbing
+						characteristics of
+						multi-layer structures.
+					</p>
+					<a class="link-primary" href="research.html">Read more about our Research</a>
+				</div>
+			</div>
+
+			<div class="grid">
+				<div class="gc-start-1 gc-end-4 text-weight-bold">
+					Team
+				</div>
+				<div class="gc-start-4 gc-end-13">
+					<p>
+						Our team has several dedicated team members who collaborate with national and international
+						researchers and
+						industries. Most of our national collaborators are members of <a class="link-external-simple"
+							href="http://www.griffith.edu.au/space/our-people"
+							target="http://www.griffith.edu.au/space/our-people">Griffith
+							Aerospace</a>.
+					</p>
+					<a class="link-primary" href="people.html">Read more about our
+						team</a>
+				</div>
+			</div>
+
+			<div class="grid">
+				<div class="gc-start-1 gc-end-13">
+					<div class="footer-left">
+						&copy; 2022–2025 AuxeticsLab. All Rights Reserved.
+					</div>
+					<ul class="no-bullets flex flex-row flex-gap-1">
+
+						<li><a class="link-footer" href="contact.html">Privacy Statement and Disclaimer</a></li>
+
+					</ul>
+				</div>
+			</div>
 		</div>
 	</main>
 </body>
