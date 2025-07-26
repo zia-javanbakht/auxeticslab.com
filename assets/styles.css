@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&display=swap');
 
-/* GLOBAL */
+/* ========================================
+   CSS VARIABLES & GLOBAL SETTINGS
+======================================== */
 
 :root {
 	/* Colors */
@@ -33,7 +35,15 @@
 	--grid-col-offset: 1;
 	--grid-col-count: 12;
 
+	/* Animations & Transitions */
+	--transition-fast: 0.2s ease-out;
+	--transition-normal: 0.3s ease-out;
+	--transition-slow: 0.5s ease-out;
 }
+
+/* ========================================
+   BASE STYLES & RESET
+======================================== */
 
 * {
 	box-sizing: border-box;
@@ -58,7 +68,6 @@
 
 body {
 	margin: 0;
-	/* background-color: var(--color-light-grey); */
 }
 
 .content {
@@ -67,7 +76,43 @@ body {
 	background-color: white;
 }
 
-/* TEXT */
+/* ========================================
+   FIXED HEADER
+======================================== */
+
+.header-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: white;
+	z-index: 1000;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-fixed .content {
+	margin: 0 auto;
+	max-width: 888px;
+}
+
+.main-content {
+	margin-top: 140px;
+	transition: all var(--transition-normal);
+}
+
+@media only screen and (min-width: 888px) {
+	.main-content {
+		margin-top: 180px;
+	}
+	
+	.header-fixed .content {
+		margin: 128px auto 0;
+	}
+}
+
+/* ========================================
+   TYPOGRAPHY
+======================================== */
 
 .text-size-caption {
 	font-size: calc(0.4*var(--text-size-large));
@@ -154,6 +199,11 @@ b {
 	font-weight: var(--text-weight-bold);
 	text-decoration: none;
 	color: var(--color-black);
+	transition: color var(--transition-fast);
+}
+
+.link-logo:hover {
+	color: var(--color-red);
 }
 
 .link-primary {
@@ -161,11 +211,21 @@ b {
 	text-decoration: none;
 	display: block;
 	margin-top: 16px;
+	transition: all var(--transition-fast);
+}
+
+.link-primary:hover {
+	transform: translateX(4px);
 }
 
 .link-primary::after {
 	content: var(--glyph-rarrow);
 	margin-left: 4px;
+	transition: margin-left var(--transition-fast);
+}
+
+.link-primary:hover::after {
+	margin-left: 8px;
 }
 
 .link-secondary {
@@ -173,43 +233,88 @@ b {
 	text-decoration: none;
 	padding-bottom: 1px;
 	border-bottom: 1px solid var(--color-black);
+	transition: all var(--transition-fast);
 }
+
+.link-secondary:hover {
+	color: var(--color-red);
+	border-bottom-color: var(--color-red);
+}
+
+/* ========================================
+   NAVIGATION & LINKS
+======================================== */
 
 .link-navigation {
 	color: var(--color-black);
 	text-decoration: none;
 	margin-right: 16px;
+	padding-bottom: 2px;
+	border-bottom: 2px solid transparent;
+	transition: all var(--transition-fast);
+	position: relative;
+}
+
+.link-navigation:hover {
+	color: var(--color-red);
+	border-bottom-color: var(--color-red);
+	transform: translateY(-1px);
 }
 
 .link-navigation.active {
 	color: var(--color-red);
-	padding-bottom: 2px;
-	border-bottom: 2px solid var(--color-red);
+	border-bottom-color: var(--color-red);
 }
 
 .link-external-simple {
 	color: var(--color-red);
 	text-decoration: none;
+	transition: all var(--transition-fast);
+}
+
+.link-external-simple:hover {
+	opacity: 0.8;
+	transform: translateY(-1px);
 }
 
 .link-external {
 	color: var(--color-red);
 	text-decoration: none;
+	transition: all var(--transition-fast);
+}
+
+.link-external:hover {
+	opacity: 0.8;
 }
 
 .link-external::after {
 	content: var(--glyph-nearrow);
 	margin-left: 4px;
+	transition: margin-left var(--transition-fast);
+}
+
+.link-external:hover::after {
+	margin-left: 8px;
 }
 
 .link-email {
 	color: var(--color-red);
 	text-decoration: none;
+	transition: all var(--transition-fast);
+}
+
+.link-email:hover {
+	opacity: 0.8;
 }
 
 .link-email::after {
 	content: var(--glyph-email);
 	margin-left: 4px;
+	transition: margin-left var(--transition-fast);
+}
+
+.link-email:hover::after {
+	margin-left: 8px;
 }
 
 
@@ -222,14 +327,27 @@ b {
 	text-decoration: none;
 	padding-bottom: 1px;
 	border-bottom: 1px solid var(--color-black);
+	transition: all var(--transition-fast);
 }
 
-/* IMAGES */
+.link-footer:hover {
+	color: var(--color-red);
+	border-bottom-color: var(--color-red);
+}
+
+/* ========================================
+   IMAGES & MEDIA
+======================================== */
 
 img {
 	max-width: 100%;
 	margin-top: 16px;
 	margin-bottom: 16px;
+	transition: all var(--transition-normal);
+}
+
+img:hover {
+	transform: scale(1.02);
 }
 
 .img-border {
@@ -257,7 +375,9 @@ img {
 
 
 
-/* LISTS */
+/* ========================================
+   LISTS
+======================================== */
 
 .enum-list {
 	list-style-type: decimal;
@@ -287,7 +407,9 @@ img {
 	margin-bottom: 16px;
 }
 
-/* FLEX */
+/* ========================================
+   LAYOUT - FLEXBOX
+======================================== */
 .flex {
 	display: flex;
 }
@@ -308,7 +430,9 @@ img {
 	justify-content: space-between;
 }
 
-/* GRID */
+/* ========================================
+   LAYOUT - GRID SYSTEM
+======================================== */
 
 .grid {
 	display: grid;
@@ -454,7 +578,9 @@ img {
 
 }
 
-/* UTILITIES */
+/* ========================================
+   UTILITIES - SPACING & BORDERS
+======================================== */
 
 .mt-0 {
 	margin-top: 8px;
@@ -656,4 +782,46 @@ img {
 
 .border-bottom {
 	border-bottom: 2px solid var(--color-grey);
+}
+
+/* ========================================
+   PAGE TRANSITIONS & ANIMATIONS
+======================================== */
+
+.main-content {
+	animation: fadeIn var(--transition-slow);
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.main-content .grid {
+	animation: slideUp var(--transition-slow) ease-out;
+}
+
+@keyframes slideUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.main-content .grid:nth-child(even) {
+	animation-delay: 0.1s;
+}
+
+.main-content .grid:nth-child(odd) {
+	animation-delay: 0.2s;
 }

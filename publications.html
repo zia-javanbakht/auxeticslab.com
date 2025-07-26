@@ -8,11 +8,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/fonts/inter.css">
 	<link rel="stylesheet" href="assets/styles.css">¯
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const navLinks = document.querySelectorAll('.link-navigation');
+			const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+			
+			navLinks.forEach(link => {
+				link.classList.remove('active');
+				if (link.getAttribute('href') === currentPage) {
+					link.classList.add('active');
+				}
+			});
+		});
+	</script>
 </head>
 
 <body>
-	<div class="content">
-		<div class="grid border-bottom">
+	<header class="header-fixed">
+		<div class="content">
+			<div class="grid border-bottom">
 			<div class="gc-start-1 gc-end-4"><a class="link-logo" href="/">Auxetics Lab</a></div>
 			<div class="gc-start-4 gc-end-10">
 				Mechanical Engineering and Industrial Design<br />
@@ -34,14 +48,14 @@
 				<a class="link-navigation" href="teaching.html">Teaching</a>
 				<a class="link-navigation" href="resources.html">Resources</a>
 				<a class="link-navigation" href="people.html">People</a>
-				<a class="link-navigation" href="publications.html">Positions</a>
-				<a class="link-navigation" href="publications.html">Contact</a>
+				<a class="link-navigation" href="positions.html">Positions</a>
+				<a class="link-navigation" href="contact.html">Contact</a>
 			</div>
 		</div>
-
-
-
-		<div class="grid">
+	</header>
+	<main class="main-content">
+		<div class="content">
+			<div class="grid">
 			<div class="gc-start-1 gc-end-13 text-size-3 text-serif text-color-black">
 				List of Publications
 			</div>
@@ -535,8 +549,9 @@
 
 				</ul>
 			</div>
+			</div>
 		</div>
-	</div>
+	</main>
 </body>
 
 </html>

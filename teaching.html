@@ -8,11 +8,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/fonts/inter.css">
 	<link rel="stylesheet" href="assets/styles.css">¯
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const navLinks = document.querySelectorAll('.link-navigation');
+			const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+			
+			navLinks.forEach(link => {
+				link.classList.remove('active');
+				if (link.getAttribute('href') === currentPage) {
+					link.classList.add('active');
+				}
+			});
+		});
+	</script>
 </head>
 
 <body>
-	<div class="content">
-		<div class="grid border-bottom">
+	<header class="header-fixed">
+		<div class="content">
+			<div class="grid border-bottom">
 			<div class="gc-start-1 gc-end-4"><a class="link-logo" href="/">Auxetics Lab</a></div>
 			<div class="gc-start-4 gc-end-10">
 				Mechanical Engineering and Industrial Design<br />
@@ -38,8 +52,10 @@
 				<a class="link-navigation" href="contact.html">Contact</a>
 			</div>
 		</div>
-
-		<div class="grid">
+	</header>
+	<main class="main-content">
+		<div class="content">
+			<div class="grid">
 			<div class="gc-start-1 gc-end-13 text-size-2 text-serif">
 				<p class="text-size-1 text-center text-serif">
 					<q class="text-size-2 text-serif">Poor is the pupil who does not surpass his master.</q>
@@ -174,9 +190,9 @@
 				<li><a class="link-footer" href="contact.html">Privacy Statement and Disclaimer</a></li>
 
 			</ul>
+			</div>
 		</div>
-	</div>
-	</div>
+	</main>
 </body>
 
 </html>
