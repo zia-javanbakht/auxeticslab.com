@@ -8,17 +8,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/styles.css">¯
 	<script>
-		document.addEventListener('DOMContentLoaded', function() {
+		document.addEventListener('DOMContentLoaded', function () {
 			const navLinks = document.querySelectorAll('.link-navigation');
 			const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-			
+
 			navLinks.forEach(link => {
 				link.classList.remove('active');
 				if (link.getAttribute('href') === currentPage) {
 					link.classList.add('active');
 				}
 			});
-			
+
 			// Load footer
 			fetch('footer.html')
 				.then(response => response.text())
@@ -37,46 +37,47 @@
 	<header class="header-fixed">
 		<div class="content">
 			<div class="grid border-bottom">
-			<div class="gc-start-1 gc-end-4"><a class="link-logo title-large" href="/">Auxetics LAB</a></div>
-			<div class="gc-start-5 gc-end-10">
-				Mechanical Engineering and Industrial Design<br />
-				<a class="link-external-simple"
-					href="http://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment"
-					target="http://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment">School of
-					Engineering and Built
-					Environment</a>
+				<div class="gc-start-1 gc-end-4"><a class="link-logo title-large" href="/">Auxetics LAB</a></div>
+				<div class="gc-start-5 gc-end-10">
+					Mechanical Engineering and Industrial Design<br />
+					<a class="link-external-simple"
+						href="http://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment"
+						target="http://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment">School
+						of
+						Engineering and Built
+						Environment</a>
+				</div>
+				<div class="gc-start-10 gc-end-13">
+					<a class="link-external-simple" href="https://www.griffith.edu.au/"
+						target="https://www.griffith.edu.au/">Griffith University</a><br />
+					Gold Coast QLD, Australia
+				</div>
+				<div class="gc-start-1 gc-end-13 mt-1">
+					<a class="link-navigation" href="index.html">Home</a>
+					<a class="link-navigation" href="research.html">Research</a>
+					<a class="link-navigation" href="publications.html">Publications</a>
+					<a class="link-navigation" href="teaching.html">Teaching</a>
+					<a class="link-navigation" href="resources.html">Resources</a>
+					<a class="link-navigation active" href="people.html">People</a>
+					<a class="link-navigation" href="positions.html">Positions</a>
+					<a class="link-navigation" href="contact.html">Contact</a>
+				</div>
 			</div>
-			<div class="gc-start-10 gc-end-13">
-				<a class="link-external-simple" href="https://www.griffith.edu.au/"
-					target="https://www.griffith.edu.au/">Griffith University</a><br />
-				Gold Coast QLD, Australia
-			</div>
-			<div class="gc-start-1 gc-end-13 mt-1">
-				<a class="link-navigation" href="index.html">Home</a>
-				<a class="link-navigation" href="research.html">Research</a>
-				<a class="link-navigation" href="publications.html">Publications</a>
-				<a class="link-navigation" href="teaching.html">Teaching</a>
-				<a class="link-navigation" href="resources.html">Resources</a>
-				<a class="link-navigation active" href="people.html">People</a>
-				<a class="link-navigation" href="positions.html">Positions</a>
-				<a class="link-navigation" href="contact.html">Contact</a>
-			</div>
-		</div>
 	</header>
 	<main class="main-content">
 		<div class="content">
 			<div class="grid">
-			<div class="gc-start-1 gc-end-13 text-size-2 text-serif text-color-red">
-				Team Leader
-			</div>
+				<div class="gc-start-1 gc-end-13 text-size-2 text-serif text-color-red">
+					Team Leader
+				</div>
 
-			<div class="gc-start-1 gc-end-5">
-				<img class="member-portrait" src="assets/images/zj.jpg">
-				<p class="text-weight-bold">Dr Zia Javanbakht<a class="link-external"
-						href="https://experts.griffith.edu.au/6935-zia-javanbakht"></a><a class="link-email"
-						href="mailto:zia.javanbakht@gmail.com"></a></p>
-				<p>Senior lecturer (Assistant Professor)</p>
-				<!--<p class="mt-1">
+				<div class="gc-start-1 gc-end-5">
+					<img class="member-portrait" src="assets/images/zj.jpg">
+					<p class="text-weight-bold">Dr Zia Javanbakht<a class="link-external"
+							href="https://experts.griffith.edu.au/6935-zia-javanbakht"></a><a class="link-email"
+							href="mailto:zia.javanbakht@gmail.com"></a></p>
+					<p>Senior lecturer (Assistant Professor)</p>
+					<!--<p class="mt-1">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat odio a dolor pellentesque, convallis
 					semper turpis euismod. Fusce egestas sollicitudin massa sed porttitor. Class aptent taciti sociosqu ad litora
 					torquent per conubia nostra, per inceptos himenaeos. Suspendisse risus ante, placerat sed feugiat nec, mattis
@@ -86,238 +87,258 @@
 					<li><a class="link-external" href="#">Website</a></li>
 					<li><a class="link-external" href="#">Email</a></li>
 				</ul>-->
-			</div>
+				</div>
 
-			<div class="gc-start-5 gc-end-13">
-				<!-- 	<img class="member-portrait" src="assets/images/example.jpg">
+				<div class="gc-start-5 gc-end-13">
+					<!-- 	<img class="member-portrait" src="assets/images/example.jpg">
 				<p class="text-weight-bold">Dr Zia Javanbakht</p>
 				<p>Principal Investigator</p>-->
-				<p class="mt-1">
-					Dr Zia Javanbakht is a chartered engineer (in three fields of civil, structural, and mechanical engineering)
-					and an early-career academic in the field of computational mechanics and material modelling. He has extensive
-					knowledge in finite element analysis (ABAQUS and MSC MARC), programming (FORTRAN, Python, and MATLAB), and
-					material modelling of composites and auxetics. He is an expert in developing customised programming code to
-					solve unconventional engineering problems. He has published several peer-reviewed journal articles,
-					authored books, edited books, and conference papers in collaboration with researchers from around the world.
-					He has more than a decade of industry experience in structural modelling/design and project management. He
-					provides consultancy services for national and international companies particularly in solid mechanics and
-					simulation. He has been able to secure more than $3M funding from external and university grant applications.
-					He holds the Fellow status of Higher Education Academy (FHEA).
-				</p>
+					<p class="mt-1">
+						Dr Zia Javanbakht is a chartered engineer (in three fields of civil, structural, and mechanical
+						engineering)
+						and an early-career academic in the field of computational mechanics and material modelling. He
+						has extensive
+						knowledge in finite element analysis (ABAQUS and MSC MARC), programming (FORTRAN, Python, and
+						MATLAB), and
+						material modelling of composites and auxetics. He is an expert in developing customised
+						programming code to
+						solve unconventional engineering problems. He has published several peer-reviewed journal
+						articles,
+						authored books, edited books, and conference papers in collaboration with researchers from
+						around the world.
+						He has more than a decade of industry experience in structural modelling/design and project
+						management. He
+						provides consultancy services for national and international companies particularly in solid
+						mechanics and
+						simulation. He has been able to secure more than $3M funding from external and university grant
+						applications.
+						He holds the Fellow status of Higher Education Academy (FHEA).
+					</p>
+
+
+				</div>
+			</div>
+
+			<div class="grid">
+				<div class="gc-start-1 gc-end-13 text-size-2 text-serif text-color-red">
+					Researchers
+				</div>
+
+				<div class="gc-start-1 gc-end-4">
+					<img class="member-portrait" src="assets/images/FH.jpg">
+					<p class="text-weight-bold">Mrs Fereshteh Hassani</p>
+					<p>PhD Student (UVic)</p>
+				</div>
+				<div class="gc-start-4 gc-end-7">
+					<img class="member-portrait" src="assets/images/jp.jpg">
+					<p class="text-weight-bold">Mr Justus Pranger</p>
+					<p>Research Intern (TU/e)</p>
+				</div>
+				<div class="gc-start-7 gc-end-10">
+					<img class="member-portrait" src="assets/images/tml.jpg">
+					<p class="text-weight-bold">Ms Theresa Maria Lehmhaus</p>
+					<p>Research Intern (Leibniz Uni Hanover)</p>
+				</div>
 
 
 			</div>
-		</div>
 
-		<div class="grid">
-			<div class="gc-start-1 gc-end-13 text-size-2 text-serif text-color-red">
-				Researchers
+			<div class="grid">
+				<div class="gc-start-1 gc-end-13 text-size-2 text-serif text-color-red">
+					Collaborators
+				</div>
+
+				<div class="gc-start-1 gc-end-4">
+					<img class="member-portrait" src="assets/images/AO.jpg">
+					<p class="text-weight-bold">Prof Andreas Öchsner</p>
+					<p>Esslingen University</p>
+				</div>
+
+				<div class="gc-start-4 gc-end-7">
+					<img class="member-portrait" src="assets/images/HA.jpg">
+					<p class="text-weight-bold">Prof Holm Altenbach</p>
+					<p>University of Magdeburg</p>
+				</div>
+
+				<div class="gc-start-7 gc-end-10">
+					<img class="member-portrait" src="assets/images/SF.jpg">
+					<p class="text-weight-bold">Prof Stefanie Feih</p>
+					<p>Griffith University</p>
+				</div>
+
+				<div class="gc-start-10 gc-end-13">
+					<img class="member-portrait" src="assets/images/DL.jpg">
+					<p class="text-weight-bold">Prof David Lloyd</p>
+					<p>Griffith University</p>
+				</div>
+
+				<div class="gc-start-1 gc-end-4">
+					<img class="member-portrait" src="assets/images/PD.jpg">
+					<p class="text-weight-bold">Prof Paulo de Souza</p>
+					<p>Edith Cowan University</p>
+				</div>
+
+				<div class="gc-start-4 gc-end-7">
+					<a class="link-external" href="https://www.plymouth.ac.uk/staff/john-summerscales">
+						<img class="member-portrait" src="assets/images/JS.jpg">
+						<p class="text-weight-bold">Prof John Summerscales</p>
+						<p>University of Plymouth</p>
+					</a>
+				</div>
+
+				<div class="gc-start-7 gc-end-10">
+					<img class="member-portrait" src="assets/images/gu.svg">
+					<p class="text-weight-bold">A/Prof Wayne Hall</p>
+					<p>Griffith University</p>
+				</div>
+
+				<div class="gc-start-10 gc-end-13">
+					<img class="member-portrait" src="assets/images/SM.jpg">
+					<p class="text-weight-bold">A/Prof Sardar Malek</p>
+					<p>University of Victoria</p>
+				</div>
+
+				<div class="gc-start-1 gc-end-4">
+					<img class="member-portrait" src="assets/images/MJM.jpg">
+					<p class="text-weight-bold">A/Prof Mohammad J. Mirzaali</p>
+					<p>TU-Delft</p>
+				</div>
+
+				<div class="gc-start-4 gc-end-7">
+					<a class="link-external" href="https://www.ua.pt/pt/p/10320827">
+						<img class="member-portrait" src="assets/images/amr.jpg">
+						<p class="text-weight-bold">A/Prof António Manuel Ramos</p>
+						<p>University of Aveiro</p>
+					</a>
+				</div>
+
+
+				<div class="gc-start-7 gc-end-10">
+					<img class="member-portrait" src="assets/images/ma.png">
+					<p class="text-weight-bold">Dr-ing Marcus Aßmus</p>
+					<p>University of Magdeburg</p>
+				</div>
+
+
+				<div class="gc-start-10 gc-end-13">
+					<img class="member-portrait" src="assets/images/hamid.jpg">
+					<p class="text-weight-bold">Dr Hamid Ahmadi</p>
+					<p>University of Tasmania</p>
+				</div>
+
+				<div class="gc-start-1 gc-end-4">
+					<img class="member-portrait" src="assets/images/LH.jpg">
+					<p class="text-weight-bold">Dr Leonhard Hitzler</p>
+					<p>Technical University of Munich</p>
+				</div>
+
+
+				<div class="gc-start-4 gc-end-7">
+					<img class="member-portrait" src="assets/images/DM.png">
+					<p class="text-weight-bold">Dr Dane Miller</p>
+					<p>Bond University</p>
+				</div>
+
+				<div class="gc-start-7 gc-end-10">
+					<img class="member-portrait" src="assets/images/NT.jpg">
+					<p class="text-weight-bold">Dr Nima Talebian</p>
+					<p>Bond University</p>
+				</div>
+
+
+				<div class="gc-start-10 gc-end-13">
+					<img class="member-portrait" src="assets/images/ia.jpg">
+					<p class="text-weight-bold">Dr Ian Underhill</p>
+					<p>Griffith University</p>
+				</div>
+
+				<div class="gc-start-1 gc-end-4">
+					<a class="link-external" href="https://mathscapes.xyz">
+						<img class="member-portrait" src="assets/images/GS.jpg">
+						<p class="text-weight-bold">Mr Gaurav Singh</p>
+						<p>Mathscapes Research</p>
+					</a>
+				</div>
+
+
+
 			</div>
 
-			<div class="gc-start-1 gc-end-4">
-				<img class="member-portrait" src="assets/images/FH.jpg">
-				<p class="text-weight-bold">Mrs Fereshteh Hassani</p>
-				<p>PhD Student</p>
-			</div>
-			
+			<div class="grid">
+				<div class="gc-start-1 gc-end-13 text-size-2 text-serif text-color-red">
+					Alumni
+				</div>
 
-		</div>
+				<div class="gc-start-1 gc-end-4">
+					<img class="member-portrait" src="assets/images/MTL.jpg">
+					<p class="text-weight-bold">Ms Marie-Theres Liebers</p>
+					<p>Research Intern</p>
+				</div>
 
-		<div class="grid">
-			<div class="gc-start-1 gc-end-13 text-size-2 text-serif text-color-red">
-				Collaborators
-			</div>
 
-			<div class="gc-start-1 gc-end-4">
-				<img class="member-portrait" src="assets/images/AO.jpg">
-				<p class="text-weight-bold">Prof Andreas Öchsner</p>
-				<p>Esslingen University</p>
-			</div>
+				<div class="gc-start-4 gc-end-7">
+					<img class="member-portrait" src="assets/images/MM.jpg">
+					<p class="text-weight-bold">Dr Mahyar Masaeli</p>
+					<p>PhD Student</p>
+				</div>
 
-			<div class="gc-start-4 gc-end-7">
-				<img class="member-portrait" src="assets/images/HA.jpg">
-				<p class="text-weight-bold">Prof Holm Altenbach</p>
-				<p>University of Magdeburg</p>
-			</div>
+				<div class="gc-start-7 gc-end-10">
+					<img class="member-portrait" src="assets/images/SH.jpg">
+					<p class="text-weight-bold">Ms Simone Heilgeist</p>
+					<p>MSc Student</p>
+				</div>
 
-			<div class="gc-start-7 gc-end-10">
-				<img class="member-portrait" src="assets/images/SF.jpg">
-				<p class="text-weight-bold">Prof Stefanie Feih</p>
-				<p>Griffith University</p>
-			</div>
+				<div class="gc-start-10 gc-end-13">
+					<img class="member-portrait" src="assets/images/jr.jpg">
+					<p class="text-weight-bold">Mr Jip Rijksen</p>
+					<p>Research Intern</p>
+				</div>
 
-			<div class="gc-start-10 gc-end-13">
-				<img class="member-portrait" src="assets/images/DL.jpg">
-				<p class="text-weight-bold">Prof David Lloyd</p>
-				<p>Griffith University</p>
-			</div>
+				<div class="gc-start-1 gc-end-4">
+					<a href="https://experts.griffith.edu.au/30609-andreas-kromik">
+						<img class="member-portrait" src="assets/images/AK.jpg"></a>
+					<p class="text-weight-bold">Dr Andreas Kromik </p>
+					<p>Post-doc</p>
+				</div>
 
-			<div class="gc-start-1 gc-end-4">
-				<img class="member-portrait" src="assets/images/PD.jpg">
-				<p class="text-weight-bold">Prof Paulo de Souza</p>
-				<p>Edith Cowan University</p>
-			</div>
+				<div class="gc-start-4 gc-end-7">
+					<img class="member-portrait" src="assets/images/BM.jpg">
+					<p class="text-weight-bold">Mr Brenton Miller</p>
+					<p>BSc Student</p>
+				</div>
 
-			<div class="gc-start-4 gc-end-7">
-				<a class="link-external" href="https://www.plymouth.ac.uk/staff/john-summerscales">
-					<img class="member-portrait" src="assets/images/JS.jpg">
-          <p class="text-weight-bold">Prof John Summerscales</p>
-          <p>University of Plymouth</p>
-        </a>
-			</div>
 
-			<div class="gc-start-7 gc-end-10">
-				<img class="member-portrait" src="assets/images/gu.svg">
-				<p class="text-weight-bold">A/Prof Wayne Hall</p>
-				<p>Griffith University</p>
-			</div>
+				<div class="gc-start-7 gc-end-10">
+					<img class="member-portrait" src="assets/images/rs.webp">
+					<p class="text-weight-bold">Mr Rahul Singh Dhari</p>
+					<p>PhD Student</p>
+				</div>
 
-			<div class="gc-start-10 gc-end-13">
-				<img class="member-portrait" src="assets/images/SM.jpg">
-				<p class="text-weight-bold">A/Prof Sardar Malek</p>
-				<p>University of Victoria</p>
-			</div>
 
-			<div class="gc-start-1 gc-end-4">
-				<img class="member-portrait" src="assets/images/MJM.jpg">
-				<p class="text-weight-bold">A/Prof Mohammad J. Mirzaali</p>
-				<p>TU-Delft</p>
-			</div>
+				<div class="gc-start-10 gc-end-13">
+					<img class="member-portrait" src="assets/images/aed.png">
+					<p class="text-weight-bold">Mr Ali Ebrahimzadeh Dehghani</p>
+					<p>PhD Student</p>
+				</div>
 
-			<div class="gc-start-4 gc-end-7">
-        <a class="link-external" href="https://www.ua.pt/pt/p/10320827">
-        <img class="member-portrait" src="assets/images/amr.jpg">
-        <p class="text-weight-bold">A/Prof António Manuel Ramos</p>
-        <p>University of Aveiro</p></a>
+				<div class="gc-start-1  gc-end-4">
+					<img class="member-portrait" src="assets/images/MMM.jpg">
+					<p class="text-weight-bold">Mr Mobin Mobin Majeed</p>
+					<p>Visiting PhD Student</p>
+				</div>
+
+				<div class="gc-start-4 gc-end-7">
+					<img class="member-portrait" src="assets/images/aa.png">
+					<p class="text-weight-bold">Mr Akshay Asthana</p>
+					<p>MPhil Student</p>
+				</div>
+
+
+
+
 			</div>
 
-
-			<div class="gc-start-7 gc-end-10">
-				<img class="member-portrait" src="assets/images/ma.png">
-				<p class="text-weight-bold">Dr-ing Marcus Aßmus</p>
-				<p>University of Magdeburg</p>
-			</div>
-
-
-			<div class="gc-start-10 gc-end-13">
-				<img class="member-portrait" src="assets/images/hamid.jpg">
-				<p class="text-weight-bold">Dr Hamid Ahmadi</p>
-				<p>University of Tasmania</p>
-			</div>
-
-			<div class="gc-start-1 gc-end-4">
-				<img class="member-portrait" src="assets/images/LH.jpg">
-				<p class="text-weight-bold">Dr Leonhard Hitzler</p>
-				<p>Technical University of Munich</p>
-			</div>
-
-
-			<div class="gc-start-4 gc-end-7">
-				<img class="member-portrait" src="assets/images/DM.png">
-				<p class="text-weight-bold">Dr Dane Miller</p>
-				<p>Bond University</p>
-			</div>
-
-			<div class="gc-start-7 gc-end-10">
-				<img class="member-portrait" src="assets/images/NT.jpg">
-				<p class="text-weight-bold">Dr Nima Talebian</p>
-				<p>Bond University</p>
-			</div>
-
-
-			<div class="gc-start-10 gc-end-13">
-				<img class="member-portrait" src="assets/images/ia.jpg">
-				<p class="text-weight-bold">Dr Ian Underhill</p>
-				<p>Griffith University</p>
-			</div>
-
-			<div class="gc-start-1 gc-end-4">
-				<a class="link-external" href="https://mathscapes.xyz">
-					<img class="member-portrait" src="assets/images/GS.jpg">
-          <p class="text-weight-bold">Mr Gaurav Singh</p>
-          <p>Mathscapes Research</p>
-				</a>
-			</div>
-
-
-
-		</div>
-
-		<div class="grid">
-			<div class="gc-start-1 gc-end-13 text-size-2 text-serif text-color-red">
-				Alumni
-			</div>
-
-			<div class="gc-start-1 gc-end-4">
-				<img class="member-portrait" src="assets/images/MTL.jpg">
-				<p class="text-weight-bold">Ms Marie-Theres Liebers</p>
-				<p>Research Intern</p>
-			</div>
-
-
-			<div class="gc-start-4 gc-end-7">
-				<img class="member-portrait" src="assets/images/MM.jpg">
-				<p class="text-weight-bold">Dr Mahyar Masaeli</p>
-				<p>PhD Student</p>
-			</div>
-
-			<div class="gc-start-7 gc-end-10">
-				<img class="member-portrait" src="assets/images/SH.jpg">
-				<p class="text-weight-bold">Ms Simone Heilgeist</p>
-				<p>MSc Student</p>
-			</div>
-
-			<div class="gc-start-10 gc-end-13">
-				<img class="member-portrait" src="assets/images/jr.jpg">
-				<p class="text-weight-bold">Mr Jip Rijksen</p>
-				<p>Research Intern</p>
-			</div>
-
-			<div class="gc-start-1 gc-end-4">
-				<a href="https://experts.griffith.edu.au/30609-andreas-kromik">
-					<img class="member-portrait" src="assets/images/AK.jpg"></a>
-				<p class="text-weight-bold">Dr Andreas Kromik </p>
-				<p>Post-doc</p>
-			</div>
-
-			<div class="gc-start-4 gc-end-7">
-				<img class="member-portrait" src="assets/images/BM.jpg">
-				<p class="text-weight-bold">Mr Brenton Miller</p>
-				<p>BSc Student</p>
-			</div>
-
-
-			<div class="gc-start-7 gc-end-10">
-				<img class="member-portrait" src="assets/images/rs.webp">
-				<p class="text-weight-bold">Mr Rahul Singh Dhari</p>
-				<p>PhD Student</p>
-			</div>
-
-
-			<div class="gc-start-10 gc-end-13">
-				<img class="member-portrait" src="assets/images/aed.png">
-				<p class="text-weight-bold">Mr Ali Ebrahimzadeh Dehghani</p>
-				<p>PhD Student</p>
-			</div>
-
-			<div class="gc-start-1  gc-end-4">
-				<img class="member-portrait" src="assets/images/MMM.jpg">
-				<p class="text-weight-bold">Mr Mobin Mobin Majeed</p>
-				<p>Visiting PhD Student</p>
-			</div>
-
-			<div class="gc-start-4 gc-end-7">
-				<img class="member-portrait" src="assets/images/aa.png">
-				<p class="text-weight-bold">Mr Akshay Asthana</p>
-				<p>MPhil Student</p>
-			</div>
-
-
-
-
-		</div>
-
-		<div id="footer-container"></div>
+			<div id="footer-container"></div>
 	</main>
 </body>
 

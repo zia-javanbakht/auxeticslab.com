@@ -531,7 +531,7 @@ img:hover {
 
 	.grid {
 		display: grid;
-		grid-template-columns: repeat(12, 48px);
+		grid-template-columns: repeat(12, 67px);
 		gap: 8px 24px;
 		padding: 24px;
 	}
