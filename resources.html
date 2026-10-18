@@ -1,97 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<title>Auxetics LAB | Resources</title>
 	<meta charset="UTF-8">
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/styles.css">¯
-	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-			const navLinks = document.querySelectorAll('.link-navigation');
-			const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-			
-			navLinks.forEach(link => {
-				link.classList.remove('active');
-				if (link.getAttribute('href') === currentPage) {
-					link.classList.add('active');
-				}
-			});
-			
-			// Load footer
-			fetch('footer.html')
-				.then(response => response.text())
-				.then(data => {
-					const footerContainer = document.getElementById('footer-container');
-					if (footerContainer) {
-						footerContainer.innerHTML = data;
-					}
-				})
-				.catch(error => console.error('Error loading footer:', error));
-		});
-	</script>
+	<title>Resources | Auxetics LAB</title>
+	<meta name="description" content="Code listings and resources accompanying books by Auxetics LAB members.">
+	<link rel="canonical" href="https://www.auxeticslab.com/resources.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Auxetics LAB">
+	<meta property="og:title" content="Resources | Auxetics LAB">
+	<meta property="og:description" content="Code listings and resources accompanying books by Auxetics LAB members.">
+	<meta property="og:url" content="https://www.auxeticslab.com/resources.html">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="preload" href="assets/fonts/Inter-roman.var.woff2?v=3.19" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="assets/styles.css">
 </head>
 
 <body>
-	<header class="header-fixed">
-		<div class="content">
-			<div class="grid border-bottom">
-			<div class="gc-start-1 gc-end-4"><a class="link-logo title-large" href="/">Auxetics LAB</a></div>
-			<div class="gc-start-5 gc-end-10">
-				Mechanical Engineering and Industrial Design<br />
-				<a class="link-external-simple"
-					href="http://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment"
-					target="http://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment">School of
-					Engineering and Built
-					Environment</a>
-			</div>
-			<div class="gc-start-10 gc-end-13">
-				<a class="link-external-simple" href="https://www.griffith.edu.au/"
-					target="https://www.griffith.edu.au/">Griffith University</a><br />
-				Gold Coast QLD, Australia
-			</div>
-			<div class="gc-start-1 gc-end-13 mt-1">
-				<a class="link-navigation" href="index.html">Home</a>
-				<a class="link-navigation" href="research.html">Research</a>
-				<a class="link-navigation" href="publications.html">Publications</a>
-				<a class="link-navigation" href="teaching.html">Teaching</a>
-				<a class="link-navigation active" href="resources.html">Resources</a>
-				<a class="link-navigation" href="people.html">People</a>
-				<a class="link-navigation" href="positions.html">Positions</a>
-				<a class="link-navigation" href="contact.html">Contact</a>
-			</div>
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<header class="site-header">
+		<div class="wrap">
+			<a class="brand" href="index.html">
+				<span class="brand-name">Auxetics <span>LAB</span></span>
+				<span class="brand-sub">Griffith University</span>
+			</a>
+			<nav class="site-nav" aria-label="Main">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="research.html">Research</a></li>
+					<li><a href="publications.html">Publications</a></li>
+					<li><a href="teaching.html">Teaching</a></li>
+					<li><a href="resources.html" aria-current="page">Resources</a></li>
+					<li><a href="people.html">People</a></li>
+					<li><a href="positions.html">Positions</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
 		</div>
 	</header>
-	<main class="main-content">
-		<div class="content">
-			<div class="grid">
-			<div class="gc-start-1 gc-end-3">
 
-				<img class="img-border-pad" src="assets/images/resource/FE.webp">
-
-
-
+	<main id="main">
+		<div class="wrap">
+			<div class="page-head">
+				<h1>Resources</h1>
+				<p>Code and supplementary material accompanying our books.</p>
 			</div>
 
-			<div class="gc-start-3 gc-end-13">
-				<p class="text-size-2 text-serif text-color-red"> Advanced Finite Element Simulation with MSC Marc &#8212
-					Application of User Subroutines</p>
-				Listing of the FORTRAN, Python, and CPP programs can be found on <a class="link-external "
-					href="https://github.com/zia-javanbakht/AFE" target="https://github.com/zia-javanbakht/AFE">GitHub</a>. This
-				repository is public and it will be updated to
-				reflect any feedback or to adress any bugs.
-
-
-			</div>
-
-
+			<section class="section">
+				<h2>Books</h2>
+				<div class="section-body resource">
+					<img src="assets/images/resource/FE.webp" alt="Cover of Advanced Finite Element Simulation with MSC Marc" width="827" height="1245" loading="lazy" decoding="async">
+					<div>
+						<h3>Advanced Finite Element Simulation with MSC Marc: Application of User Subroutines</h3>
+						<p class="muted small" style="margin-top:4px">Zia Javanbakht and Andreas &Ouml;chsner &middot; Springer, 2017</p>
+						<p style="margin-top:12px">Listings of the FORTRAN, Python, and C++ programs can be found on GitHub. This repository is public and it will be updated to reflect any feedback or to address any bugs.</p>
+						<a class="more" href="https://github.com/zia-javanbakht/AFE" target="_blank" rel="noopener">View the code on GitHub</a>
+					</div>
+				</div>
+			</section>
 		</div>
-
-
-
-		<div id="footer-container"></div>
 	</main>
+
+	<footer class="site-footer">
+		<div class="wrap">
+			<div>
+				<p><strong>Auxetics LAB</strong></p>
+				<p>Mechanical Engineering and Industrial Design</p>
+				<p><a href="https://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment" target="_blank" rel="noopener">School of Engineering and Built Environment</a></p>
+				<p><a href="https://www.griffith.edu.au/" target="_blank" rel="noopener">Griffith University</a>, Gold Coast QLD, Australia</p>
+			</div>
+			<div>
+				<p>&copy; 2022&ndash;2026 Auxetics LAB. All rights reserved.</p>
+				<p><a href="contact.html#privacy">Privacy statement and disclaimer</a></p>
+			</div>
+		</div>
+	</footer>
 </body>
 
 </html>
