@@ -15,6 +15,12 @@
 	<meta name="theme-color" content="#ffffff">
 	<link rel="preload" href="assets/fonts/Inter-roman.var.woff2?v=3.19" as="font" type="font/woff2" crossorigin>
 	<link rel="stylesheet" href="assets/styles.css">
+	<!-- Wait for the whole page before showing it, so a page change never reveals a half-drawn page -->
+	<link rel="expect" href="#site-footer" blocking="render">
+	<!-- Browsers that support it load a page in the background when a link is hovered, so it opens instantly -->
+	<script type="speculationrules">
+		{"prerender": [{"where": {"href_matches": "/*"}, "eagerness": "moderate"}], "prefetch": [{"where": {"href_matches": "/*"}, "eagerness": "moderate"}]}
+	</script>
 </head>
 
 <body>
@@ -32,7 +38,7 @@
 					<li><a href="research.html">Research</a></li>
 					<li><a href="publications.html">Publications</a></li>
 					<li><a href="teaching.html">Teaching</a></li>
-					<li><a href="resources.html" aria-current="page">Resources</a></li>
+					<li><a href="resources.html" aria-current="page">Resources<span class="nav-indicator" aria-hidden="true"></span></a></li>
 					<li><a href="people.html">People</a></li>
 					<li><a href="positions.html">Positions</a></li>
 					<li><a href="contact.html">Contact</a></li>
@@ -51,7 +57,7 @@
 			<section class="section">
 				<h2>Books</h2>
 				<div class="section-body resource">
-					<img src="assets/images/resource/FE.webp" alt="Cover of Advanced Finite Element Simulation with MSC Marc" width="827" height="1245" loading="lazy" decoding="async">
+					<img src="assets/images/resource/FE.webp" alt="Cover of Advanced Finite Element Simulation with MSC Marc" width="827" height="1245">
 					<div>
 						<h3>Advanced Finite Element Simulation with MSC Marc: Application of User Subroutines</h3>
 						<p class="muted small" style="margin-top:4px">Zia Javanbakht and Andreas &Ouml;chsner &middot; Springer, 2017</p>
@@ -63,7 +69,7 @@
 		</div>
 	</main>
 
-	<footer class="site-footer">
+	<footer class="site-footer" id="site-footer">
 		<div class="wrap">
 			<div>
 				<p><strong>Auxetics LAB</strong></p>

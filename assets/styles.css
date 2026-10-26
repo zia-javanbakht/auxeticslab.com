@@ -41,6 +41,12 @@
 	--measure: 68ch;
 	--gutter: 24px;
 	--radius: 4px;
+
+	/* Page transitions */
+	--vt-out: 100ms;
+	--vt-in: 260ms;
+	--vt-slide: 320ms;
+	--vt-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 /* --------------------------------------------------------------------------
@@ -55,6 +61,8 @@
 
 html {
 	-webkit-text-size-adjust: 100%;
+	/* Reserve the scrollbar's space so short and long pages line up */
+	scrollbar-gutter: stable;
 	scroll-padding-top: 96px;
 }
 
@@ -169,6 +177,69 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
+   Page transitions
+   Cross-document view transitions: browsers that support them animate between
+   pages; others simply navigate as before.
+   -------------------------------------------------------------------------- */
+
+@view-transition {
+	navigation: auto;
+}
+
+/* No page animation for visitors who ask their system for less motion */
+@media (prefers-reduced-motion: reduce) {
+	@view-transition {
+		navigation: none;
+	}
+}
+
+/* On wide screens the header is always visible (sticky), so it stays put
+   while the content changes beneath it and the tab underline slides across.
+   On phones the header scrolls away, so it simply fades with the page;
+   otherwise it would fly in from above when a link lower down is used. */
+@media (min-width: 861px) {
+	.site-header {
+		view-transition-name: site-header;
+	}
+
+	.nav-indicator {
+		view-transition-name: nav-indicator;
+	}
+}
+
+/* Old page fades out quickly, then the new one fades up into place, so the
+   two pages are never seen on top of each other. */
+::view-transition-old(root) {
+	animation: vt-fade-out var(--vt-out) ease-in both;
+}
+
+::view-transition-new(root) {
+	animation: vt-fade-up var(--vt-in) var(--vt-ease) var(--vt-out) both;
+}
+
+::view-transition-group(nav-indicator) {
+	animation-duration: var(--vt-slide);
+	animation-timing-function: var(--vt-ease);
+}
+
+::view-transition-group(site-header) {
+	animation-duration: 200ms;
+}
+
+@keyframes vt-fade-out {
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes vt-fade-up {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+}
+
+/* --------------------------------------------------------------------------
    Header & navigation
    -------------------------------------------------------------------------- */
 
@@ -231,21 +302,55 @@ a:hover {
 }
 
 .site-nav a {
+	position: relative;
 	display: block;
 	padding: 4px 0;
 	font-size: 0.9375rem;
 	color: var(--muted);
 	text-decoration: none;
-	border-bottom: 1.5px solid transparent;
 }
 
 .site-nav a:hover {
 	color: var(--ink);
 }
 
+/* Hover preview: a faint line grows under the tab before it is clicked */
+.site-nav a::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 1.5px;
+	background: var(--line);
+	transform: scaleX(0);
+	transition: transform 0.2s ease;
+}
+
+@media (hover: hover) {
+	.site-nav a:hover::after {
+		transform: scaleX(1);
+	}
+}
+
+/* The current tab is already open; clicking it would only reload the page */
 .site-nav a[aria-current='page'] {
 	color: var(--ink);
-	border-bottom-color: var(--accent);
+	pointer-events: none;
+}
+
+.site-nav a[aria-current='page']::after {
+	display: none;
+}
+
+/* Underline under the current tab; it slides to the new tab between pages */
+.nav-indicator {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 1.5px;
+	background: var(--accent);
 }
 
 @media (max-width: 860px) {
@@ -258,16 +363,10 @@ a:hover {
 		padding-bottom: 8px;
 	}
 
-	.site-nav {
-		margin: 0 calc(-1 * var(--gutter));
-		padding: 0 var(--gutter);
-		overflow-x: auto;
-		scrollbar-width: none;
-	}
-
+	/* Wrap the tabs rather than scrolling them, so the current tab is
+	   always on screen when a new page opens */
 	.site-nav ul {
-		flex-wrap: nowrap;
-		gap: 18px;
+		gap: 2px 18px;
 	}
 
 	.site-nav a {
