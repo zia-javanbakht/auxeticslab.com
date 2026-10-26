@@ -8,9 +8,10 @@ This is a static academic website for the Auxetics Lab at Griffith University. T
 
 ## Architecture
 
-Plain static HTML with one shared stylesheet; no JavaScript and no build step.
+Plain static HTML with one shared stylesheet; no JavaScript code and no build step.
 
-- **HTML pages**: every page repeats the same `<head>`, `<header class="site-header">` (brand + nav) and `<footer class="site-footer">`. When adding a page or nav item, update all eight pages. The current page's nav link carries `aria-current="page"`.
+- **HTML pages**: every page repeats the same `<head>`, `<header class="site-header">` (brand + nav) and `<footer class="site-footer" id="site-footer">`. When adding a page or nav item, update all eight pages. The current page's nav link carries `aria-current="page"` and contains `<span class="nav-indicator" aria-hidden="true"></span>` (the underline that slides between tabs).
+- **Page transitions**: `@view-transition` in `styles.css` animates page changes (old page fades out, new fades up; on wide screens the header stays still and the tab underline slides). Timings are the `--vt-*` tokens; reduced-motion users get no animation. Each `<head>` also has a `speculationrules` block (JSON, not script code) that preloads a page on hover, and `<link rel="expect" href="#site-footer" blocking="render">` so pages are never shown half-drawn. Keep all three when adding a page.
 - **Content layout**: `.page-head` (h1 + lead), then `.section` blocks (an `<h2>` label column + `.section-body` content column). Other components: `.figure`, `.epigraph`, `.project` (research), `.people`/`.person` cards, `.pubs` (publications, grouped by year), `.course`, `.resource`, `.note`, `.more` (arrow link).
 - **CSS**: `/assets/styles.css`, themed by tokens in `:root` (colours, type sizes, layout width). Inter is self-hosted as the variable font (`assets/fonts/Inter-roman.var.woff2`, `Inter-italic.var.woff2`); no Google Fonts requests.
 - **Images**: `/assets/images/` (subfolders `index/`, `research/`, `resource/`). Portraits are initials-named, square-ish, max 480 px wide; figures max 2000 px wide. Always give `<img>` an `alt`, `width`/`height`, and `loading="lazy"` below the fold. Logos in the people grid use `class="logo"` so they aren't cropped.

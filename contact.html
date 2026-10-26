@@ -15,6 +15,12 @@
 	<meta name="theme-color" content="#ffffff">
 	<link rel="preload" href="assets/fonts/Inter-roman.var.woff2?v=3.19" as="font" type="font/woff2" crossorigin>
 	<link rel="stylesheet" href="assets/styles.css">
+	<!-- Wait for the whole page before showing it, so a page change never reveals a half-drawn page -->
+	<link rel="expect" href="#site-footer" blocking="render">
+	<!-- Browsers that support it load a page in the background when a link is hovered, so it opens instantly -->
+	<script type="speculationrules">
+		{"prerender": [{"where": {"href_matches": "/*"}, "eagerness": "moderate"}], "prefetch": [{"where": {"href_matches": "/*"}, "eagerness": "moderate"}]}
+	</script>
 </head>
 
 <body>
@@ -35,7 +41,7 @@
 					<li><a href="resources.html">Resources</a></li>
 					<li><a href="people.html">People</a></li>
 					<li><a href="positions.html">Positions</a></li>
-					<li><a href="contact.html" aria-current="page">Contact</a></li>
+					<li><a href="contact.html" aria-current="page">Contact<span class="nav-indicator" aria-hidden="true"></span></a></li>
 				</ul>
 			</nav>
 		</div>
@@ -60,7 +66,7 @@
 		</div>
 	</main>
 
-	<footer class="site-footer">
+	<footer class="site-footer" id="site-footer">
 		<div class="wrap">
 			<div>
 				<p><strong>Auxetics LAB</strong></p>

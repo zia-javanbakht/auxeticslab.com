@@ -15,6 +15,12 @@
 	<meta name="theme-color" content="#ffffff">
 	<link rel="preload" href="assets/fonts/Inter-roman.var.woff2?v=3.19" as="font" type="font/woff2" crossorigin>
 	<link rel="stylesheet" href="assets/styles.css">
+	<!-- Wait for the whole page before showing it, so a page change never reveals a half-drawn page -->
+	<link rel="expect" href="#site-footer" blocking="render">
+	<!-- Browsers that support it load a page in the background when a link is hovered, so it opens instantly -->
+	<script type="speculationrules">
+		{"prerender": [{"where": {"href_matches": "/*"}, "eagerness": "moderate"}], "prefetch": [{"where": {"href_matches": "/*"}, "eagerness": "moderate"}]}
+	</script>
 </head>
 
 <body>
@@ -28,7 +34,7 @@
 			</a>
 			<nav class="site-nav" aria-label="Main">
 				<ul>
-					<li><a href="index.html" aria-current="page">Home</a></li>
+					<li><a href="index.html" aria-current="page">Home<span class="nav-indicator" aria-hidden="true"></span></a></li>
 					<li><a href="research.html">Research</a></li>
 					<li><a href="publications.html">Publications</a></li>
 					<li><a href="teaching.html">Teaching</a></li>
@@ -54,7 +60,7 @@
 			</div>
 
 			<figure class="figure hero">
-				<img src="assets/images/index/tensile.jpg" alt="3D-printed PLA tensile coupons" width="1899" height="1624">
+				<img src="assets/images/index/tensile.jpg" alt="3D-printed PLA tensile coupons" width="1899" height="1624" fetchpriority="high">
 				<figcaption>Regularisation of the element deletion technique for the Direct FE&sup2; method (3D-printed PLA tensile coupons).</figcaption>
 			</figure>
 
@@ -90,7 +96,7 @@
 		</div>
 	</main>
 
-	<footer class="site-footer">
+	<footer class="site-footer" id="site-footer">
 		<div class="wrap">
 			<div>
 				<p><strong>Auxetics LAB</strong></p>
