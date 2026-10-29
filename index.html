@@ -1,177 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<title>Auxetics LAB</title>
 	<meta charset="UTF-8">
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/styles.css">¯
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			const navLinks = document.querySelectorAll('.link-navigation');
-			const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-
-			navLinks.forEach(link => {
-				link.classList.remove('active');
-				if (link.getAttribute('href') === currentPage) {
-					link.classList.add('active');
-				}
-			});
-
-			// Load footer
-			fetch('footer.html')
-				.then(response => response.text())
-				.then(data => {
-					const footerContainer = document.getElementById('footer-container');
-					if (footerContainer) {
-						footerContainer.innerHTML = data;
-					}
-				})
-				.catch(error => console.error('Error loading footer:', error));
-		});
+	<title>Auxetics LAB</title>
+	<meta name="description" content="Auxetics LAB at Griffith University develops novel high-performance composite and auxetic materials using computational, continuum and experimental mechanics.">
+	<link rel="canonical" href="https://www.auxeticslab.com/">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Auxetics LAB">
+	<meta property="og:title" content="Auxetics LAB">
+	<meta property="og:description" content="Auxetics LAB at Griffith University develops novel high-performance composite and auxetic materials using computational, continuum and experimental mechanics.">
+	<meta property="og:url" content="https://www.auxeticslab.com/">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="preload" href="assets/fonts/Inter-roman.var.woff2?v=3.19" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="assets/styles.css">
+	<!-- Wait for the whole page before showing it, so a page change never reveals a half-drawn page -->
+	<link rel="expect" href="#site-footer" blocking="render">
+	<!-- Browsers that support it load a page in the background when a link is hovered, so it opens instantly -->
+	<script type="speculationrules">
+		{"prerender": [{"where": {"href_matches": "/*"}, "eagerness": "moderate"}], "prefetch": [{"where": {"href_matches": "/*"}, "eagerness": "moderate"}]}
 	</script>
 </head>
 
-​<style>
-	div {
-		text-align: justify;
-		text-justify: inter-word;
-	}
-</style>
-
 <body>
-	<header class="header-fixed">
-		<div class="content">
-			<div class="grid border-bottom">
-				<div class="gc-start-1 gc-end-4"><a class="link-logo title-large" href="/">Auxetics LAB</a></div>
-				<div class="gc-start-5 gc-end-10">
-					Mechanical Engineering and Industrial Design<br />
-					<a class="link-external-simple"
-						href="http://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment"
-						target="http://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment">School
-						of
-						Engineering and Built
-						Environment</a>
-				</div>
-				<div class="gc-start-10 gc-end-13">
-					<a class="link-external-simple" href="https://www.griffith.edu.au/"
-						target="https://www.griffith.edu.au/">Griffith University</a><br />
-					Gold Coast QLD, Australia
-				</div>
-				<div class="gc-start-1 gc-end-13 mt-1">
-					<a class="link-navigation active" href="index.html">Home</a>
-					<a class="link-navigation" href="research.html">Research</a>
-					<a class="link-navigation" href="publications.html">Publications</a>
-					<a class="link-navigation" href="teaching.html">Teaching</a>
-					<a class="link-navigation" href="resources.html">Resources</a>
-					<a class="link-navigation" href="people.html">People</a>
-					<a class="link-navigation" href="positions.html">Positions</a>
-					<a class="link-navigation" href="contact.html">Contact</a>
-				</div>
-			</div>
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<header class="site-header">
+		<div class="wrap">
+			<a class="brand" href="index.html">
+				<span class="brand-name">Auxetics <span>LAB</span></span>
+				<span class="brand-sub">Griffith University</span>
+			</a>
+			<nav class="site-nav" aria-label="Main">
+				<ul>
+					<li><a href="index.html" aria-current="page">Home<span class="nav-indicator" aria-hidden="true"></span></a></li>
+					<li><a href="research.html">Research</a></li>
+					<li><a href="publications.html">Publications</a></li>
+					<li><a href="teaching.html">Teaching</a></li>
+					<li><a href="resources.html">Resources</a></li>
+					<li><a href="people.html">People</a></li>
+					<li><a href="positions.html">Positions</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
 		</div>
 	</header>
 
-	<main class="main-content">
-		<div class="content">
-
-			<div class="grid">
-				<div class="gc-start-1 gc-end-13 text-size-2 text-serif">
-					<p class="text-center text-mono">
-						<q class="quote-mono">Science is what we understand well enough to explain to a
-							computer; art is
-							all the rest. </q>
-						- Donald Knuth
-					</p>
-				</div>
-
-				<div class="gc-start-1 gc-end-11">
-					<p class="text-center text-size-caption img-caption" style="line-height:1px">
-						<img src="assets/images/index/tensile.jpg" style="display:block">
-						Regularisation of the element deletion technique for the Direct FE² method (3D-printed PLA
-						tensile coupons)
-					</p>
-				</div>
-
+	<main id="main">
+		<div class="wrap">
+			<div class="page-head">
+				<span class="eyebrow">Griffith University &middot; ADaPT</span>
+				<h1>Composite and auxetic materials,<br>understood through mechanics.</h1>
+				<p>We develop novel high-performance composite and auxetic materials, and adopt and extend computational approaches to simulate their behaviour.</p>
+				<blockquote class="epigraph" style="margin-top:24px">
+					<p>&ldquo;Science is what we understand well enough to explain to a computer; art is all the rest.&rdquo;</p>
+					<footer>Donald Knuth</footer>
+				</blockquote>
 			</div>
 
-			<div class="grid">
-				<div class="gc-start-1 gc-end-4 title-small" style="text-transform: none;">
-					about Auxetics LAB
-				</div>
-				<div class="gc-start-4 gc-end-13">
-					<p>
-						We are a research group with the <a class="link-external-simple"
-							href="http://www.griffith.edu.au/advanced-design-prototyping-technologies-institute"
-							target="http://www.griffith.edu.au/advanced-design-prototyping-technologies-institute">Advanced
-							Design
-							Prototyping Technologies Institute (ADaPT)</a> at
-						<a class="link-external-simple" href="http://www.griffith.edu.au/"
-							target="http://www.griffith.edu.au/">Griffith University</a>.
+			<figure class="figure hero">
+				<img src="assets/images/index/tensile.jpg" alt="3D-printed PLA tensile coupons" width="1899" height="1624" fetchpriority="high">
+				<figcaption>Regularisation of the element deletion technique for the Direct FE&sup2; method (3D-printed PLA tensile coupons).</figcaption>
+			</figure>
 
-						We are interested
-						in developing novel high-performance composite and auxetic materials. We try to adopt and extend
-						computational
-						approaches to simulate the material behaviour and improve our
-						understanding.
-					</p>
+			<section class="section">
+				<h2>About</h2>
+				<div class="section-body">
+					<p>We are a research group with the <a href="https://www.griffith.edu.au/advanced-design-prototyping-technologies-institute" target="_blank" rel="noopener">Advanced Design Prototyping Technologies Institute (ADaPT)</a> at <a href="https://www.griffith.edu.au/" target="_blank" rel="noopener">Griffith University</a>. We are interested in developing novel high-performance composite and auxetic materials. We try to adopt and extend computational approaches to simulate the material behaviour and improve our understanding.</p>
 				</div>
-			</div>
+			</section>
 
-			<div class="grid">
-				<div class="gc-start-1 gc-end-4 title-small">
-					Aim
+			<section class="section">
+				<h2>Aim</h2>
+				<div class="section-body">
+					<p>We aim to leverage the technology in high-performance materials to improve the quality of human life, develop the industry, and contribute to the Australian economy. We envision high-quality products that are supported by state-of-the-art research to diminish the gap between industry and academia.</p>
 				</div>
-				<div class="gc-start-4 gc-end-13">
-					<p>
-						We aim to leverage the technology in high-performance materials to improve the quality of human
-						life, develop
-						the industry, and contribute to the Australian economy. We envision high-quality products that
-						are supported by state-of-the-art research to diminish the gap between industry and academia.
-					</p>
-				</div>
-			</div>
+			</section>
 
-			<div class="grid">
-				<div class="gc-start-1 gc-end-4 title-small">
-					Research Focus
+			<section class="section">
+				<h2>Research focus</h2>
+				<div class="section-body">
+					<p>Our focus is on developing energy dissipating devices using novel high-performance composite and auxetic materials. We use Industry 4.0 technologies such as additive manufacturing and artificial intelligence to improve the quality of our designs. Our current focus is improving the energy-absorbing characteristics of multi-layer structures.</p>
+					<a class="more" href="research.html">Read more about our research</a>
 				</div>
-				<div class="gc-start-4 gc-end-13">
-					<p>
-						Our focus is on developing energy dissipating devices using novel high-performance composite and
-						auxetic
-						materials. We use Industry 4.0 technologies such as additive manufacturing and artificial
-						intelligence to
-						improve the quality of our designs. Our current focus is improving the energy-absorbing
-						characteristics of
-						multi-layer structures.
-					</p>
-					<a class="link-primary" href="research.html">Read more about our Research</a>
-				</div>
-			</div>
+			</section>
 
-			<div class="grid">
-				<div class="gc-start-1 gc-end-4  title-small">
-					Team
+			<section class="section">
+				<h2>Team</h2>
+				<div class="section-body">
+					<p>Our team has several dedicated members who collaborate with national and international researchers and industries. Most of our national collaborators are members of <a href="https://www.griffith.edu.au/space/our-people" target="_blank" rel="noopener">Griffith Aerospace</a>.</p>
+					<a class="more" href="people.html">Meet the team</a>
 				</div>
-				<div class="gc-start-4 gc-end-13">
-					<p>
-						Our team has several dedicated team members who collaborate with national and international
-						researchers and
-						industries. Most of our national collaborators are members of <a class="link-external-simple"
-							href="http://www.griffith.edu.au/space/our-people"
-							target="http://www.griffith.edu.au/space/our-people">Griffith
-							Aerospace</a>.
-					</p>
-					<a class="link-primary" href="people.html">Read more about our
-						team</a>
-				</div>
-			</div>
-
-			<div id="footer-container"></div>
+			</section>
 		</div>
 	</main>
+
+	<footer class="site-footer" id="site-footer">
+		<div class="wrap">
+			<div>
+				<p><strong>Auxetics LAB</strong></p>
+				<p>Mechanical Engineering and Industrial Design</p>
+				<p><a href="https://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment" target="_blank" rel="noopener">School of Engineering and Built Environment</a></p>
+				<p><a href="https://www.griffith.edu.au/" target="_blank" rel="noopener">Griffith University</a>, Gold Coast QLD, Australia</p>
+			</div>
+			<div>
+				<p>&copy; 2022&ndash;2026 Auxetics LAB. All rights reserved.</p>
+				<p><a href="contact.html#privacy">Privacy statement and disclaimer</a></p>
+			</div>
+		</div>
+	</footer>
 </body>
 
 </html>

@@ -1,555 +1,365 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<title>Auxetics LAB | Publications</title>
 	<meta charset="UTF-8">
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/styles.css">¯
-	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-			const navLinks = document.querySelectorAll('.link-navigation');
-			const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-			
-			navLinks.forEach(link => {
-				link.classList.remove('active');
-				if (link.getAttribute('href') === currentPage) {
-					link.classList.add('active');
-				}
-			});
-			
-			// Load footer
-			fetch('footer.html')
-				.then(response => response.text())
-				.then(data => {
-					const footerContainer = document.getElementById('footer-container');
-					if (footerContainer) {
-						footerContainer.innerHTML = data;
-					}
-				})
-				.catch(error => console.error('Error loading footer:', error));
-		});
+	<title>Publications | Auxetics LAB</title>
+	<meta name="description" content="Journal articles, conference papers, books and book chapters by Auxetics LAB members and collaborators.">
+	<link rel="canonical" href="https://www.auxeticslab.com/publications.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Auxetics LAB">
+	<meta property="og:title" content="Publications | Auxetics LAB">
+	<meta property="og:description" content="Journal articles, conference papers, books and book chapters by Auxetics LAB members and collaborators.">
+	<meta property="og:url" content="https://www.auxeticslab.com/publications.html">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="preload" href="assets/fonts/Inter-roman.var.woff2?v=3.19" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="assets/styles.css">
+	<!-- Wait for the whole page before showing it, so a page change never reveals a half-drawn page -->
+	<link rel="expect" href="#site-footer" blocking="render">
+	<!-- Browsers that support it load a page in the background when a link is hovered, so it opens instantly -->
+	<script type="speculationrules">
+		{"prerender": [{"where": {"href_matches": "/*"}, "eagerness": "moderate"}], "prefetch": [{"where": {"href_matches": "/*"}, "eagerness": "moderate"}]}
 	</script>
 </head>
 
 <body>
-	<header class="header-fixed">
-		<div class="content">
-			<div class="grid border-bottom">
-			<div class="gc-start-1 gc-end-4"><a class="link-logo title-large" href="/">Auxetics LAB</a></div>
-			<div class="gc-start-5 gc-end-10">
-				Mechanical Engineering and Industrial Design<br />
-				<a class="link-external-simple"
-					href="http://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment"
-					target="http://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment">School of
-					Engineering and Built
-					Environment</a>
-			</div>
-			<div class="gc-start-10 gc-end-13">
-				<a class="link-external-simple" href="https://www.griffith.edu.au/"
-					target="https://www.griffith.edu.au/">Griffith University</a><br />
-				Gold Coast QLD, Australia
-			</div>
-			<div class="gc-start-1 gc-end-13 mt-1">
-				<a class="link-navigation" href="index.html">Home</a>
-				<a class="link-navigation" href="research.html">Research</a>
-				<a class="link-navigation active" href="publications.html">Publications</a>
-				<a class="link-navigation" href="teaching.html">Teaching</a>
-				<a class="link-navigation" href="resources.html">Resources</a>
-				<a class="link-navigation" href="people.html">People</a>
-				<a class="link-navigation" href="positions.html">Positions</a>
-				<a class="link-navigation" href="contact.html">Contact</a>
-			</div>
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<header class="site-header">
+		<div class="wrap">
+			<a class="brand" href="index.html">
+				<span class="brand-name">Auxetics <span>LAB</span></span>
+				<span class="brand-sub">Griffith University</span>
+			</a>
+			<nav class="site-nav" aria-label="Main">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="research.html">Research</a></li>
+					<li><a href="publications.html" aria-current="page">Publications<span class="nav-indicator" aria-hidden="true"></span></a></li>
+					<li><a href="teaching.html">Teaching</a></li>
+					<li><a href="resources.html">Resources</a></li>
+					<li><a href="people.html">People</a></li>
+					<li><a href="positions.html">Positions</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
 		</div>
 	</header>
-	<main class="main-content">
-		<div class="content">
-			<div class="grid">
-			<div class="gc-start-1 gc-end-13 text-size-3 text-serif text-color-black">
-				List of Publications
+
+	<main id="main">
+		<div class="wrap">
+			<div class="page-head">
+				<h1>Publications</h1>
+				<p>Journal articles, conference papers, books and book chapters by our members and collaborators, newest first (42 items). See also <a href="https://scholar.google.com/citations?user=obbD9R0AAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
 			</div>
 
-
-
-			<div class="gc-start-1 gc-end-13">
-				<table>
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Amus.2023">1</a>]
-						</td>
-						<td class="bibtexitem">
-							Marcus A&szlig;mus, Zia Javanbakht, and Holm Altenbach.
-							The Direct Approach for Plates Considering Hygrothermal Loading and
-							Residual Kinetics.
-							In Holm Altenbach, Arkadi Berezovski, Francesco dell'Isola, and
-							Alexey Porubov, editors, <em>Sixty Shades of Generalized Continua</em>, volume
-							170 of <em>Advanced structured materials</em>, pages 21--32. Springer
-							International Publishing, Cham, 2023.
-							[&nbsp;<a href="http://dx.doi.org/10.1007/978-3-031-26186-2{\textunderscore }3">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Hall.2023">2</a>]
-						</td>
-						<td class="bibtexitem">
-							Wayne Hall, Andreas Kromik, Brenton Miller, Ian Underhill, and Zia Javanbakht.
-							A Machine Learning Model for Flaw Identification in Fibre-Reinforced
-							Composites.
-							<em>Materials Science Forum</em>, 1094:5--10, 2023.
-							[&nbsp;<a href="http://dx.doi.org/10.4028/p-IgDB3j">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Karimi.2023">3</a>]
-						</td>
-						<td class="bibtexitem">
-							Mahdi Karimi, Mohammad&nbsp;Javad Khoshgoftar, Mohammad Karimi, Mohammad&nbsp;Javad
-							Mirzaali, and Zia Javanbakht.
-							An analytical model for the static behaviour of honeycomb sandwich
-							plates with auxetic cores using higher-order shear deformation theories.
-							<em>International journal of mechanics and materials in design</em>,
-							19(4):951--969, 2023.
-							[&nbsp;<a href="http://dx.doi.org/10.1007/s10999-023-09667-4">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Kumar.2023">4</a>]
-						</td>
-						<td class="bibtexitem">
-							Vinay Kumar, Thanh van Dau, Zia Javanbakht, Andrew Seagar, Nam-Trung Nguyen,
-							and Peter Woodfield.
-							Updated formulation of magnetic body force in ferrofluids.
-							<em>International journal of engineering science</em>, 192:103929,
-							2023.
-							[&nbsp;<a href="http://dx.doi.org/10.1016/j.ijengsci.2023.103929">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Miller.2023">5</a>]
-						</td>
-						<td class="bibtexitem">
-							Dane Miller, Nhat-Minh Ho, Nima Talebian, and Zia Javanbakht.
-							Real-time monitoring of early-age compressive strength of concrete
-							using an IoT-enabled monitoring system: an investigative study.
-							<em>Innovative Infrastructure Solutions</em>, 8(2), 2023.
-							[&nbsp;<a href="http://dx.doi.org/10.1007/s41062-023-01043-7">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="SinghDhari.2023">6</a>]
-						</td>
-						<td class="bibtexitem">
-							Rahul Singh Dhari, Wayne Hall, Akshay Asthana, and Zia Javanbakht.
-							Direct FE2 analysis of additively manufactured parts with voids.
-							<em>Materials today. Proceedings</em>, 2023.
-							[&nbsp;<a href="http://dx.doi.org/10.1016/j.matpr.2023.05.124">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Kromik.2022">7</a>]
-						</td>
-						<td class="bibtexitem">
-							Andreas Kromik, Ian Underhill, Zia Javanbakht, Gaston Francucci, and Wayne
-							Hall.
-							Low-cost fabrication of high-performance composite structures using
-							external compaction pressure.
-							<em>Materials Science and Technology</em>, 38(17):1459--1466, 2022.
-							[&nbsp;<a href="http://dx.doi.org/10.1080/02670836.2022.2082641">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Kromik.2022b">8</a>]
-						</td>
-						<td class="bibtexitem">
-							Andreas Kromik, Zia Javanbakht, Brenton Miller, Ian Underhill, and Wayne Hall.
-							On the Effects of Anisotropy in Detecting Flaws of Fibre-Reinforced
-							Composites.
-							<em>Applied composite materials</em>, 2022.
-							[&nbsp;<a href="http://dx.doi.org/10.1007/s10443-022-10067-8">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Dhari.2021">9</a>]
-						</td>
-						<td class="bibtexitem">
-							Rahul&nbsp;Singh Dhari, Zia Javanbakht, and Wayne Hall.
-							On the inclined static loading of honeycomb re-entrant auxetics.
-							<em>Composite structures</em>, 273:114289, 2021.
-							[&nbsp;<a href="http://dx.doi.org/10.1016/j.compstruct.2021.114289">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Hall.2021">10</a>]
-						</td>
-						<td class="bibtexitem">
-							Wayne Hall and Zia Javanbakht.
-							<em>Design and manufacture of fibre-reinforced composites</em>, volume
-							volume 158 of <em>Advanced structured materials</em>.
-							Springer, Cham, 1st ed. 2021 edition, 2021.
-							[&nbsp;<a href="http://dx.doi.org/10.1007/978-3-030-78807-0">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Bergmann.2020">11</a>]
-						</td>
-						<td class="bibtexitem">
-							Stefan Bergmann, Fereshteh Hassani, Zia Javanbakht, and Marcus A&szlig;mus.
-							On a Fast Analytical Approximation of Natural Frequencies for
-							Photovoltaic Modules.
-							<em>Technische Mechanik</em>, 2020.
-							[&nbsp;<a href="http://dx.doi.org/10.24352/UB.OVGU-2020-025">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Dhari.2020">12</a>]
-						</td>
-						<td class="bibtexitem">
-							Rahul&nbsp;Singh Dhari, Zia Javanbakht, and Wayne Hall.
-							On the Deformation Mechanism of Re-entrant Honeycomb Auxetics under
-							Inclined Static Loads.
-							<em>Materials letters</em>, page 129214, 2020.
-							[&nbsp;<a href="http://dx.doi.org/10.1016/j.matlet.2020.129214">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Hall.2020">13</a>]
-						</td>
-						<td class="bibtexitem">
-							Wayne Hall, Stuart Palmer, Simon Howell, Zia Javanbakht, and Nicholas Emerson.
-							An evaluation of an experential learning initative in a first-year
-							engineering materials course.
-							<em>Journal of Material Education</em>, 42(5-6):193--202, 2020.
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Hassani.2020">14</a>]
-						</td>
-						<td class="bibtexitem">
-							Fereshteh Hassani and Zia Javanbakht.
-							Adjusting the Plastic Zone Development in Steel Plate Shear
-							Walls---A Finite Element Study.
-							In Andreas &Ouml;chsner and Holm Altenbach, editors, <em>Engineering
-								Design Applications III</em>, volume 124 of <em>Advanced structured
-								materials</em>, pages 337--348. Springer International Publishing, Cham, 2020.
-							[&nbsp;<a href="http://dx.doi.org/10.1007/978-3-030-39062-4{\textunderscore }27">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Hassani.2020b">15</a>]
-						</td>
-						<td class="bibtexitem">
-							Fereshteh Hassani and Zia Javanbakht.
-							Effect of geometrical variations on the failure mechanisms of
-							perforated steel plate shear Walls---a parametric study towards a new
-							design.
-							<em>Thin-Walled Structures</em>, page 107244, 2020.
-							[&nbsp;<a href="http://dx.doi.org/10.1016/j.tws.2020.107244">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Javanbakht.2020">16</a>]
-						</td>
-						<td class="bibtexitem">
-							Zia Javanbakht, Wayne Hall, Amandeep&nbsp;Singh Virk, John Summerscales, and Andreas
-							&Ouml;chsner.
-							Finite element analysis of natural fiber composites using a
-							self-updating model.
-							<em>Journal of composite materials</em>, 54(23):3275--3286, 2020.
-							[&nbsp;<a href="http://dx.doi.org/10.1177/0021998320912822">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Javanbakht.2020b">17</a>]
-						</td>
-						<td class="bibtexitem">
-							Zia Javanbakht, Wayne Hall, and Andreas &Ouml;chsner.
-							An element-wise scheme to analyse local mechanical anisotropy in
-							fibre-reinforced composites.
-							<em>Materials Science and Technology</em>, 36(11):1178--1190, 2020.
-							[&nbsp;<a href="http://dx.doi.org/10.1080/02670836.2020.1762296">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Ochsner.2020">18</a>]
-						</td>
-						<td class="bibtexitem">
-							Andreas &Ouml;chsner and Holm Altenbach, editors.
-							<em>Engineering Design Applications III</em>.
-							Advanced structured materials. Springer International Publishing,
-							Cham, 2020.
-							[&nbsp;<a href="http://dx.doi.org/10.1007/978-3-030-39062-4">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Heilgeist.2019">19</a>]
-						</td>
-						<td class="bibtexitem">
-							Simone Heilgeist, Burkhard Heine, Markus Merkel, Leonhard Hitzler, Zia
-							Javanbakht, and Andreas &Ouml;chsner.
-							The influence of post--heat treatments on the tensile strength and
-							surface hardness of selectively laser--melted AlSi10Mg: Materialwissenschaft
-							und Werkstofftechnik, 50(5), 546-552.
-							<em>Materialwissenschaft und Werkstofftechnik</em>, 2019.
-							[&nbsp;<a href="http://dx.doi.org/10.1002/MAWE.201800236">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Javanbakht.2019">20</a>]
-						</td>
-						<td class="bibtexitem">
-							Zia Javanbakht, Wayne Hall, and Andreas &Ouml;chsner.
-							Effective Thermal Conductivity of Fiber Reinforced Composites Under
-							Orientation Clustering.
-							In Andreas &Ouml;chsner and Holm Altenbach, editors, <em>Engineering
-								design applications</em>, volume&nbsp;92 of <em>Advanced structured materials,
-								1869-8433</em>, pages 507--519. Springer, Cham, Switzerland, 2019.
-							[&nbsp;<a href="http://dx.doi.org/10.1007/978-3-319-79005-3$\backslash$textunderscore">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Javanbakht.2019b">21</a>]
-						</td>
-						<td class="bibtexitem">
-							Zia Javanbakht, Marcus A&szlig;mus, Konstantin Naumenko, Andreas &Ouml;chsner, and
-							Holm Altenbach.
-							On thermal strains and residual stresses in the linear theory of
-							anti--sandwiches.
-							<em>Zeitschrift f&uuml;r Angewandte Mathematik und Mechanik</em>,
-							99(8), 2019.
-							[&nbsp;<a href="http://dx.doi.org/10.1002/ZAMM.201900062">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Ochsner.2019">22</a>]
-						</td>
-						<td class="bibtexitem">
-							Andreas &Ouml;chsner and Holm Altenbach, editors.
-							<em>Engineering design applications</em>, volume volume 92 of <em>
-								Advanced structured materials, 1869-8433</em>.
-							Springer, Cham, Switzerland, 2019.
-							[&nbsp;<a href="http://dx.doi.org/10.1007/978-3-319-79005-3">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Javanbakht.2018">23</a>]
-						</td>
-						<td class="bibtexitem">
-							Zia Javanbakht and Andreas &Ouml;chsner.
-							<em>Computational Statics Revision Course</em>.
-							Springer International Publishing, Cham, 2018.
-							[&nbsp;<a href="http://dx.doi.org/10.1007/978-3-319-67462-9">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Javanbakht.2017">24</a>]
-						</td>
-						<td class="bibtexitem">
-							Zia Javanbakht and Andreas &Ouml;chsner.
-							<em>Advanced finite element simulation with MSC Marc: Application
-								of user subroutines</em>.
-							Springer, Cham, 2017.
-							[&nbsp;<a href="http://dx.doi.org/10.1007/978-3-319-47668-1">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Javanbakht.2017b">25</a>]
-						</td>
-						<td class="bibtexitem">
-							Zia Javanbakht, Wayne Hall, and Andreas &Ouml;chsner.
-							Computational Evaluation of Transverse Thermal Conductivity of
-							Natural Fiber Composites.
-							In Andreas &Ouml;chsner and Holm Altenbach, editors, <em>Improved
-								Performance of Materials: Design and Experimental Approaches</em>, volume&nbsp;72 of
-							<em>Advanced structured materials</em>, pages 197--206. Springer, Cham, 2017.
-							[&nbsp;<a href="http://dx.doi.org/10.1007/978-3-319-59590-0">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Javanbakht.2017c">26</a>]
-						</td>
-						<td class="bibtexitem">
-							Zia Javanbakht, Wayne Hall, and Andreas &Ouml;chsner.
-							The Effect of Partitioning on the Clustering Index of
-							Randomly-Oriented Fiber Composites: A Parametric Study.
-							<em>Defect and Diffusion Forum</em>, 380:232--241, 2017.
-							[&nbsp;<a href="http://dx.doi.org/10.4028/www.scientific.net/DDF.380.232">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Javanbakht.2017d">27</a>]
-						</td>
-						<td class="bibtexitem">
-							Zia Javanbakht, Wayne Hall, and Andreas &Ouml;chsner.
-							The effect of substrate bonding on characterization of thin elastic
-							layers: A finite element study.
-							<em>Materialwissenschaft und Werkstofftechnik</em>, 48(5):456--462,
-							2017.
-							[&nbsp;<a href="http://dx.doi.org/10.1002/mawe.201700035">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Ochsner.2017">28</a>]
-						</td>
-						<td class="bibtexitem">
-							Andreas &Ouml;chsner and Holm Altenbach, editors.
-							<em>Improved Performance of Materials: Design and Experimental
-								Approaches</em>, volume&nbsp;72 of <em>Advanced structured materials</em>.
-							Springer, Cham, 2017.
-							[&nbsp;<a href="http://dx.doi.org/10.1007/978-3-319-59590-0">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Javanbakht.2016">29</a>]
-						</td>
-						<td class="bibtexitem">
-							Zia Javanbakht, Wayne Hall, and Andreas &Ouml;chsner.
-							Automatized Estimation of the Effective Thermal Conductivity of
-							Carbon Fiber Reinforced Composite Materials.
-							<em>Defect and Diffusion Forum</em>, 370:177--183, 2016.
-							[&nbsp;<a href="http://dx.doi.org/10.4028/www.scientific.net/DDF.370.177">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-
-
-					<tr valign="top">
-						<td align="right" class="bibtexnumber">
-							[<a name="Javanbakht.2016b">30</a>]
-						</td>
-						<td class="bibtexitem">
-							Zia Javanbakht, Wayne Hall, and Andreas &Ouml;chsner.
-							Finite Element Evaluation of Effective Thermal Conductivity of Short
-							Carbon Nano Tubes: A Comparative Study.
-							<em>Defect and Diffusion Forum</em>, 372:208--214, 2016.
-							[&nbsp;<a href="http://dx.doi.org/10.4028/www.scientific.net/DDF.372.208">DOI</a>&nbsp;]
-
-						</td>
-					</tr>
-				</table>
-			</div>
-
+			<section class="section">
+				<h2>2026</h2>
+				<div class="section-body">
+					<ol class="pubs">
+						<li>
+							<p class="pub-title">A TPMS-integrated paediatric proximal femoral osteotomy implant demonstrates structural feasibility and improved load sharing: An in silico proof-of-concept study</p>
+							<p class="pub-authors">Ali Ebrahimzadeh Dehaghani, Alireza Y. Bavil, Emmanuel Eghan-Acquah, Zia Javanbakht, Martina Barzan, David G. Lloyd, Christopher P. Carty, and Stefanie Feih</p>
+							<p class="pub-venue"><em>Computers in Biology and Medicine</em>, 213:111813, 2026.</p>
+						</li>
+						<li>
+							<p class="pub-title">Buckling of multi-layer semi-auxetic meta-plates</p>
+							<p class="pub-authors">M. Shadman, Hamid Ahmadi, Mohammad Javad Khoshgoftar, Zia Javanbakht, and Mohammad Javad Mirzaali</p>
+							<p class="pub-venue"><em>Composites Part C: Open Access</em>, 100813, 2026.</p>
+						</li>
+					</ol>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2>2025</h2>
+				<div class="section-body">
+					<ol class="pubs">
+						<li>
+							<p class="pub-title">Regularisation in Direct FE&sup2; multiscale modelling of fused-filament fabricated parts</p>
+							<p class="pub-authors">Rahul Singh Dhari, Wayne Hall, Stefanie Feih, and Zia Javanbakht</p>
+							<p class="pub-venue"><em>Composite Structures</em>, 366:119180, 2025.</p>
+						</li>
+						<li>
+							<p class="pub-title">Energy absorption of bio-inspired rotating square auxetics: An experimental study</p>
+							<p class="pub-authors">Fereshteh Hassani, Navid Zobeiry, Zia Javanbakht, and Sardar Malek</p>
+							<p class="pub-venue">2025.</p>
+						</li>
+						<li>
+							<p class="pub-title">Effects of solution ageing in compressive behaviour of SLM-In718 triply periodic minimal surfaces</p>
+							<p class="pub-authors">Mobin Majeed, Rong Situ, and Zia Javanbakht</p>
+							<p class="pub-venue"><em>Progress in Additive Manufacturing</em>, 10(9):7051&ndash;7068, 2025. <a class="pub-link" href="https://doi.org/10.1007/s40964-025-01025-4" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">In silico model of strain adaptive bone remodelling: a preliminary study of hip arthroplasty</p>
+							<p class="pub-authors">Ant&oacute;nio Ramos and Zia Javanbakht</p>
+							<p class="pub-venue"><em>Proceedings of the Conference on Computational and Artificial Intelligence for Mechanics and Biomechanics</em>, ISEP, Porto, 2025.</p>
+						</li>
+						<li>
+							<p class="pub-title">Automated detection of deformation mechanisms in re-entrant honeycomb auxetics using machine learning</p>
+							<p class="pub-authors">Gaurav Singh, Rahul Singh Dhari, and Zia Javanbakht</p>
+							<p class="pub-venue"><em>International Journal of Protective Structures</em>, 16(4):853&ndash;877, 2025.</p>
+						</li>
+					</ol>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2>2024</h2>
+				<div class="section-body">
+					<ol class="pubs">
+						<li>
+							<p class="pub-title">Micromechanical modelling of [0<sub>m</sub>/90<sub>n</sub>]<sub>s</sub> laminates</p>
+							<p class="pub-authors">Akshay Asthana, Wayne Hall, Andreas Kromik, and Zia Javanbakht</p>
+							<p class="pub-venue"><em>11th Australasian Congress on Applied Mechanics (ACAM 2024)</em>, pp. 10&ndash;18. Engineers Australia, Brisbane, 2024.</p>
+						</li>
+						<li>
+							<p class="pub-title">Multi-functional design of TPMS-structures for temporary paediatric fixation devices</p>
+							<p class="pub-authors">Ali Ebrahimzadeh Dehaghani, Zia Javanbakht, Martina Barzan, David G. Lloyd, and Stefanie Feih</p>
+							<p class="pub-venue"><em>Advanced Engineering Materials</em>, 2024.</p>
+						</li>
+						<li>
+							<p class="pub-title">Direct FE&sup2; failure prediction of fused-filament fabricated parts</p>
+							<p class="pub-authors">Rahul Singh Dhari, Wayne Hall, Stefanie Feih, and Zia Javanbakht</p>
+							<p class="pub-venue"><em>Engineering Failure Analysis</em>, 163:108408, 2024.</p>
+						</li>
+						<li>
+							<p class="pub-title">Large deformation behavior and energy absorption of rotating square auxetics</p>
+							<p class="pub-authors">Fereshteh Hassani, Zia Javanbakht, and Sardar Malek</p>
+							<p class="pub-venue"><em>Composites Part B: Engineering</em>, 283:111596, 2024.</p>
+						</li>
+					</ol>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2>2023</h2>
+				<div class="section-body">
+					<ol class="pubs">
+						<li>
+							<p class="pub-title">The Direct Approach for Plates Considering Hygrothermal Loading and Residual Kinetics</p>
+							<p class="pub-authors">Marcus A&szlig;mus, Zia Javanbakht, and Holm Altenbach</p>
+							<p class="pub-venue">In H. Altenbach, A. Berezovski, F. dell'Isola, and A. Porubov (eds.), <em>Sixty Shades of Generalized Continua</em>, Advanced Structured Materials, vol. 170, pp. 21&ndash;32. Springer, Cham, 2023. <a class="pub-link" href="https://doi.org/10.1007/978-3-031-26186-2_3" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">Direct FE&sup2; analysis of additively manufactured parts with voids</p>
+							<p class="pub-authors">Rahul Singh Dhari, Wayne Hall, Akshay Asthana, and Zia Javanbakht</p>
+							<p class="pub-venue"><em>Materials Today: Proceedings</em>, 2023. <a class="pub-link" href="https://doi.org/10.1016/j.matpr.2023.05.124" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">A Machine Learning Model for Flaw Identification in Fibre-Reinforced Composites</p>
+							<p class="pub-authors">Wayne Hall, Andreas Kromik, Brenton Miller, Ian Underhill, and Zia Javanbakht</p>
+							<p class="pub-venue"><em>Materials Science Forum</em>, 1094:5&ndash;10, 2023. <a class="pub-link" href="https://doi.org/10.4028/p-IgDB3j" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">Energy dissipative bio-inspired rotating square auxetics for building applications</p>
+							<p class="pub-authors">Fereshteh Hassani, Zia Javanbakht, Thomas M. Froese, and Sardar Malek</p>
+							<p class="pub-venue"><em>Progress in Canadian Mechanical Engineering</em>, 6, 2023.</p>
+						</li>
+						<li>
+							<p class="pub-title">An analytical model for the static behaviour of honeycomb sandwich plates with auxetic cores using higher-order shear deformation theories</p>
+							<p class="pub-authors">Mahdi Karimi, Mohammad Javad Khoshgoftar, Mohammad Karimi, Mohammad Javad Mirzaali, and Zia Javanbakht</p>
+							<p class="pub-venue"><em>International Journal of Mechanics and Materials in Design</em>, 19(4):951&ndash;969, 2023. <a class="pub-link" href="https://doi.org/10.1007/s10999-023-09667-4" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">On the Effects of Anisotropy in Detecting Flaws of Fibre-Reinforced Composites</p>
+							<p class="pub-authors">Andreas Kromik, Zia Javanbakht, Brenton Miller, Ian Underhill, and Wayne Hall</p>
+							<p class="pub-venue"><em>Applied Composite Materials</em>, 30(1):21&ndash;39, 2023. <a class="pub-link" href="https://doi.org/10.1007/s10443-022-10067-8" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">Updated formulation of magnetic body force in ferrofluids</p>
+							<p class="pub-authors">Vinay Kumar, Thanh van Dau, Zia Javanbakht, Andrew Seagar, Nam-Trung Nguyen, and Peter Woodfield</p>
+							<p class="pub-venue"><em>International Journal of Engineering Science</em>, 192:103929, 2023. <a class="pub-link" href="https://doi.org/10.1016/j.ijengsci.2023.103929" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">Real-time monitoring of early-age compressive strength of concrete using an IoT-enabled monitoring system: an investigative study</p>
+							<p class="pub-authors">Dane Miller, Nhat-Minh Ho, Nima Talebian, and Zia Javanbakht</p>
+							<p class="pub-venue"><em>Innovative Infrastructure Solutions</em>, 8(2):75, 2023. <a class="pub-link" href="https://doi.org/10.1007/s41062-023-01043-7" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">A case study on the use of a multi-faceted team project for final-year mechanical engineering thesis students</p>
+							<p class="pub-authors">Peter Woodfield, Ben Herring, Huiazong Li, Dzung Dao, Van Thanh Dau, Shoujin Sun, Stefanie Feih, Zia Javanbakht, and Maksym Rybachuk</p>
+							<p class="pub-venue"><em>34th Australasian Association for Engineering Education Conference (AAEE 2023)</em>, pp. 585&ndash;593. Engineers Australia, Gold Coast, 2023.</p>
+						</li>
+					</ol>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2>2022</h2>
+				<div class="section-body">
+					<ol class="pubs">
+						<li>
+							<p class="pub-title">Low-cost fabrication of high-performance composite structures using external compaction pressure</p>
+							<p class="pub-authors">Andreas Kromik, Ian Underhill, Zia Javanbakht, Gaston Francucci, and Wayne Hall</p>
+							<p class="pub-venue"><em>Materials Science and Technology</em>, 38(17):1459&ndash;1466, 2022. <a class="pub-link" href="https://doi.org/10.1080/02670836.2022.2082641" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+					</ol>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2>2021</h2>
+				<div class="section-body">
+					<ol class="pubs">
+						<li>
+							<p class="pub-title">On the inclined static loading of honeycomb re-entrant auxetics</p>
+							<p class="pub-authors">Rahul Singh Dhari, Zia Javanbakht, and Wayne Hall</p>
+							<p class="pub-venue"><em>Composite Structures</em>, 273:114289, 2021. <a class="pub-link" href="https://doi.org/10.1016/j.compstruct.2021.114289" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">On the Deformation Mechanism of Re-entrant Honeycomb Auxetics under Inclined Static Loads</p>
+							<p class="pub-authors">Rahul Singh Dhari, Zia Javanbakht, and Wayne Hall</p>
+							<p class="pub-venue"><em>Materials Letters</em>, 286:129214, 2021. <a class="pub-link" href="https://doi.org/10.1016/j.matlet.2020.129214" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">Design and Manufacture of Fibre-Reinforced Composites</p>
+							<p class="pub-authors">Wayne Hall and Zia Javanbakht</p>
+							<p class="pub-venue">Advanced Structured Materials, vol. 158. Springer, Cham, 2021. <a class="pub-link" href="https://doi.org/10.1007/978-3-030-78807-0" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">Effect of geometrical variations on the failure mechanisms of perforated steel plate shear walls&mdash;a parametric study towards a new design</p>
+							<p class="pub-authors">Fereshteh Hassani and Zia Javanbakht</p>
+							<p class="pub-venue"><em>Thin-Walled Structures</em>, 159:107244, 2021. <a class="pub-link" href="https://doi.org/10.1016/j.tws.2020.107244" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+					</ol>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2>2020</h2>
+				<div class="section-body">
+					<ol class="pubs">
+						<li>
+							<p class="pub-title">On a Fast Analytical Approximation of Natural Frequencies for Photovoltaic Modules</p>
+							<p class="pub-authors">Stefan Bergmann, Fereshteh Hassani, Zia Javanbakht, and Marcus A&szlig;mus</p>
+							<p class="pub-venue"><em>Technische Mechanik</em>, 40(2):191&ndash;203, 2020. <a class="pub-link" href="https://doi.org/10.24352/UB.OVGU-2020-025" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">An evaluation of an experiential learning initiative in a first-year engineering materials course</p>
+							<p class="pub-authors">Wayne Hall, Stuart Palmer, Simon Howell, Zia Javanbakht, and Nicholas Emerson</p>
+							<p class="pub-venue"><em>Journal of Materials Education</em>, 42(5&ndash;6):193&ndash;202, 2020.</p>
+						</li>
+						<li>
+							<p class="pub-title">Adjusting the Plastic Zone Development in Steel Plate Shear Walls&mdash;A Finite Element Study</p>
+							<p class="pub-authors">Fereshteh Hassani and Zia Javanbakht</p>
+							<p class="pub-venue">In A. &Ouml;chsner and H. Altenbach (eds.), <em>Engineering Design Applications III</em>, Advanced Structured Materials, vol. 124, pp. 337&ndash;348. Springer, Cham, 2020. <a class="pub-link" href="https://doi.org/10.1007/978-3-030-39062-4_27" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">Computational Modelling of Fibre-Reinforced Composites and Nanocomposites</p>
+							<p class="pub-authors">Zia Javanbakht</p>
+							<p class="pub-venue">PhD thesis, School of Engineering and Built Environment, Griffith University, 2020.</p>
+						</li>
+						<li>
+							<p class="pub-title">Finite element analysis of natural fiber composites using a self-updating model</p>
+							<p class="pub-authors">Zia Javanbakht, Wayne Hall, Amandeep Singh Virk, John Summerscales, and Andreas &Ouml;chsner</p>
+							<p class="pub-venue"><em>Journal of Composite Materials</em>, 54(23):3275&ndash;3286, 2020. <a class="pub-link" href="https://doi.org/10.1177/0021998320912822" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">An element-wise scheme to analyse local mechanical anisotropy in fibre-reinforced composites</p>
+							<p class="pub-authors">Zia Javanbakht, Wayne Hall, and Andreas &Ouml;chsner</p>
+							<p class="pub-venue"><em>Materials Science and Technology</em>, 36(11):1178&ndash;1190, 2020. <a class="pub-link" href="https://doi.org/10.1080/02670836.2020.1762296" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+					</ol>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2>2019</h2>
+				<div class="section-body">
+					<ol class="pubs">
+						<li>
+							<p class="pub-title">Blended learning in Engineering Design: Using YouTube analytics to track student engagement with online content</p>
+							<p class="pub-authors">Nicholas Emerson, Geoff Tansley, and Zia Javanbakht</p>
+							<p class="pub-venue"><em>30th Annual Conference of the Australasian Association for Engineering Education (AAEE 2019)</em>. Engineers Australia, 2019.</p>
+						</li>
+						<li>
+							<p class="pub-title">The influence of post-heat treatments on the tensile strength and surface hardness of selectively laser-melted AlSi10Mg</p>
+							<p class="pub-authors">Simone Heilgeist, Burkhard Heine, Markus Merkel, Leonhard Hitzler, Zia Javanbakht, and Andreas &Ouml;chsner</p>
+							<p class="pub-venue"><em>Materialwissenschaft und Werkstofftechnik</em>, 50(5):546&ndash;552, 2019. <a class="pub-link" href="https://doi.org/10.1002/MAWE.201800236" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">On thermal strains and residual stresses in the linear theory of anti-sandwiches</p>
+							<p class="pub-authors">Zia Javanbakht, Marcus A&szlig;mus, Konstantin Naumenko, Andreas &Ouml;chsner, and Holm Altenbach</p>
+							<p class="pub-venue"><em>Zeitschrift f&uuml;r Angewandte Mathematik und Mechanik</em>, 99(8):e201900062, 2019. <a class="pub-link" href="https://doi.org/10.1002/ZAMM.201900062" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+					</ol>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2>2018</h2>
+				<div class="section-body">
+					<ol class="pubs">
+						<li>
+							<p class="pub-title">Effective Thermal Conductivity of Fiber Reinforced Composites Under Orientation Clustering</p>
+							<p class="pub-authors">Zia Javanbakht, Wayne Hall, and Andreas &Ouml;chsner</p>
+							<p class="pub-venue">In A. &Ouml;chsner and H. Altenbach (eds.), <em>Engineering Design Applications</em>, Advanced Structured Materials, vol. 92, pp. 507&ndash;519. Springer, Cham, 2018. <a class="pub-link" href="https://doi.org/10.1007/978-3-319-79005-3" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">Computational Statics Revision Course</p>
+							<p class="pub-authors">Zia Javanbakht and Andreas &Ouml;chsner</p>
+							<p class="pub-venue">Springer, Cham, 2018. <a class="pub-link" href="https://doi.org/10.1007/978-3-319-67462-9" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+					</ol>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2>2017</h2>
+				<div class="section-body">
+					<ol class="pubs">
+						<li>
+							<p class="pub-title">Advanced Finite Element Simulation with MSC Marc: Application of User Subroutines</p>
+							<p class="pub-authors">Zia Javanbakht and Andreas &Ouml;chsner</p>
+							<p class="pub-venue">Springer, Cham, 2017. <a class="pub-link" href="https://doi.org/10.1007/978-3-319-47668-1" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">Automatized Estimation of the Effective Thermal Conductivity of Carbon Fiber Reinforced Composite Materials</p>
+							<p class="pub-authors">Zia Javanbakht, Wayne Hall, and Andreas &Ouml;chsner</p>
+							<p class="pub-venue"><em>Defect and Diffusion Forum</em>, 370:177&ndash;183, 2017. <a class="pub-link" href="https://doi.org/10.4028/www.scientific.net/DDF.370.177" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">Finite Element Evaluation of Effective Thermal Conductivity of Short Carbon Nano Tubes: A Comparative Study</p>
+							<p class="pub-authors">Zia Javanbakht, Wayne Hall, and Andreas &Ouml;chsner</p>
+							<p class="pub-venue"><em>Defect and Diffusion Forum</em>, 372:208&ndash;214, 2017. <a class="pub-link" href="https://doi.org/10.4028/www.scientific.net/DDF.372.208" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">The effect of substrate bonding on characterization of thin elastic layers: A finite element study</p>
+							<p class="pub-authors">Zia Javanbakht, Wayne Hall, and Andreas &Ouml;chsner</p>
+							<p class="pub-venue"><em>Materialwissenschaft und Werkstofftechnik</em>, 48(5):456&ndash;462, 2017. <a class="pub-link" href="https://doi.org/10.1002/mawe.201700035" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">Computational Evaluation of Transverse Thermal Conductivity of Natural Fiber Composites</p>
+							<p class="pub-authors">Zia Javanbakht, Wayne Hall, and Andreas &Ouml;chsner</p>
+							<p class="pub-venue">In A. &Ouml;chsner and H. Altenbach (eds.), <em>Improved Performance of Materials: Design and Experimental Approaches</em>, Advanced Structured Materials, vol. 72, pp. 197&ndash;206. Springer, Cham, 2017. <a class="pub-link" href="https://doi.org/10.1007/978-3-319-59590-0" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+						<li>
+							<p class="pub-title">The Effect of Partitioning on the Clustering Index of Randomly-Oriented Fiber Composites: A Parametric Study</p>
+							<p class="pub-authors">Zia Javanbakht, Wayne Hall, and Andreas &Ouml;chsner</p>
+							<p class="pub-venue"><em>Defect and Diffusion Forum</em>, 380:232&ndash;241, 2017. <a class="pub-link" href="https://doi.org/10.4028/www.scientific.net/DDF.380.232" target="_blank" rel="noopener">DOI</a></p>
+						</li>
+					</ol>
+				</div>
+			</section>
 		</div>
-
-
-
-
-
-		<div id="footer-container"></div>
 	</main>
+
+	<footer class="site-footer" id="site-footer">
+		<div class="wrap">
+			<div>
+				<p><strong>Auxetics LAB</strong></p>
+				<p>Mechanical Engineering and Industrial Design</p>
+				<p><a href="https://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment" target="_blank" rel="noopener">School of Engineering and Built Environment</a></p>
+				<p><a href="https://www.griffith.edu.au/" target="_blank" rel="noopener">Griffith University</a>, Gold Coast QLD, Australia</p>
+			</div>
+			<div>
+				<p>&copy; 2022&ndash;2026 Auxetics LAB. All rights reserved.</p>
+				<p><a href="contact.html#privacy">Privacy statement and disclaimer</a></p>
+			</div>
+		</div>
+	</footer>
 </body>
 
 </html>

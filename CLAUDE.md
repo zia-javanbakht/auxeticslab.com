@@ -8,24 +8,14 @@ This is a static academic website for the Auxetics Lab at Griffith University. T
 
 ## Architecture
 
-The website follows a simple static HTML structure with shared styling:
+Plain static HTML with one shared stylesheet; no JavaScript code and no build step.
 
-- **HTML Pages**: Each page (`index.html`, `research.html`, `people.html`, etc.) follows a consistent template structure with:
-  - Common header with lab branding and university affiliation
-  - Navigation menu across all pages
-  - Grid-based content layout using CSS Grid
-  - Shared footer with copyright information
-
-- **CSS Architecture**: 
-  - Single stylesheet at `/assets/styles.css` with CSS custom properties (variables) for consistent theming
-  - Grid system using 12-column layout (`gc-start-*` and `gc-end-*` classes)
-  - Typography system with Inter and Source Serif Pro fonts
-  - Responsive design with mobile-first approach
-
-- **Assets Organization**:
-  - Fonts stored in `/assets/fonts/` (Inter font family with all variants)
-  - Images in `/assets/images/` with subdirectories for specific sections (index/, research/, resource/)
-  - Team member photos follow consistent naming (initials.jpg/png)
+- **HTML pages**: every page repeats the same `<head>`, `<header class="site-header">` (brand + nav) and `<footer class="site-footer" id="site-footer">`. When adding a page or nav item, update all eight pages. The current page's nav link carries `aria-current="page"` and contains `<span class="nav-indicator" aria-hidden="true"></span>` (the underline that slides between tabs).
+- **Page transitions**: `@view-transition` in `styles.css` animates page changes (old page fades out, new fades up; on wide screens the header stays still and the tab underline slides). Timings are the `--vt-*` tokens; reduced-motion users get no animation. Each `<head>` also has a `speculationrules` block (JSON, not script code) that preloads a page on hover, and `<link rel="expect" href="#site-footer" blocking="render">` so pages are never shown half-drawn. Keep all three when adding a page.
+- **Content layout**: `.page-head` (h1 + lead), then `.section` blocks (an `<h2>` label column + `.section-body` content column). Other components: `.figure`, `.epigraph`, `.project` (research), `.people`/`.person` cards, `.pubs` (publications, grouped by year), `.course`, `.resource`, `.note`, `.more` (arrow link).
+- **CSS**: `/assets/styles.css`, themed by tokens in `:root` (colours, type sizes, layout width). Inter is self-hosted as the variable font (`assets/fonts/Inter-roman.var.woff2`, `Inter-italic.var.woff2`); no Google Fonts requests.
+- **Images**: `/assets/images/` (subfolders `index/`, `research/`, `resource/`). Portraits are initials-named, square-ish, max 480 px wide; figures max 2000 px wide. Always give `<img>` an `alt`, `width`/`height`, and `loading="lazy"` below the fold. Logos in the people grid use `class="logo"` so they aren't cropped.
+- External links use `target="_blank" rel="noopener"`.
 
 ## Common Development Tasks
 
@@ -43,11 +33,7 @@ git pull origin main
 - **Homepage**: Main content in `/index.html` with hero image in `/assets/images/index/`
 
 ### CSS Modifications
-All styling is centralized in `/assets/styles.css`. The system uses:
-- CSS custom properties for colors, typography, and layout values
-- Grid system with predefined column classes
-- Consistent spacing and typography scales
-- Component-based class naming (e.g., `link-navigation`, `text-size-*`)
+All styling is centralized in `/assets/styles.css`; change colours, sizes and widths through the `:root` tokens.
 
 ## Content Structure
 
@@ -55,7 +41,7 @@ Each HTML page follows this consistent structure:
 1. Header section with lab branding and university affiliation
 2. Navigation menu (8 main sections)
 3. Main content using grid layout system
-4. Footer with copyright and privacy links
+4. Footer with affiliation, copyright and privacy link (inline in every page)
 
 Key sections:
 - **Home** (`index.html`): Lab introduction, research focus, team overview

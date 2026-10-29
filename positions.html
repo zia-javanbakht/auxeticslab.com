@@ -1,160 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<title>Auxetics LAB | Positions</title>
 	<meta charset="UTF-8">
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="assets/styles.css">¯
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			const navLinks = document.querySelectorAll('.link-navigation');
-			const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-
-			navLinks.forEach(link => {
-				link.classList.remove('active');
-				if (link.getAttribute('href') === currentPage) {
-					link.classList.add('active');
-				}
-			});
-
-			// Load footer
-			fetch('footer.html')
-				.then(response => response.text())
-				.then(data => {
-					const footerContainer = document.getElementById('footer-container');
-					if (footerContainer) {
-						footerContainer.innerHTML = data;
-					}
-				})
-				.catch(error => console.error('Error loading footer:', error));
-		});
+	<title>Positions | Auxetics LAB</title>
+	<meta name="description" content="PhD and research opportunities at Auxetics LAB, Griffith University: eligibility, desired skills and available topics.">
+	<link rel="canonical" href="https://www.auxeticslab.com/positions.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Auxetics LAB">
+	<meta property="og:title" content="Positions | Auxetics LAB">
+	<meta property="og:description" content="PhD and research opportunities at Auxetics LAB, Griffith University: eligibility, desired skills and available topics.">
+	<meta property="og:url" content="https://www.auxeticslab.com/positions.html">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="preload" href="assets/fonts/Inter-roman.var.woff2?v=3.19" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="assets/styles.css">
+	<!-- Wait for the whole page before showing it, so a page change never reveals a half-drawn page -->
+	<link rel="expect" href="#site-footer" blocking="render">
+	<!-- Browsers that support it load a page in the background when a link is hovered, so it opens instantly -->
+	<script type="speculationrules">
+		{"prerender": [{"where": {"href_matches": "/*"}, "eagerness": "moderate"}], "prefetch": [{"where": {"href_matches": "/*"}, "eagerness": "moderate"}]}
 	</script>
 </head>
 
 <body>
-	<header class="header-fixed">
-		<div class="content">
-			<div class="grid border-bottom">
-				<div class="gc-start-1 gc-end-4"><a class="link-logo title-large" href="/">Auxetics LAB</a></div>
-				<div class="gc-start-5 gc-end-10">
-					Mechanical Engineering and Industrial Design<br />
-					<a class="link-external-simple" href="http://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment" target="http://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment">School of
-						Engineering and Built
-						Environment</a>
-				</div>
-				<div class="gc-start-10 gc-end-13">
-					<a class="link-external-simple" href="https://www.griffith.edu.au/" target="https://www.griffith.edu.au/">Griffith University</a><br />
-					Gold Coast QLD, Australia
-				</div>
-				<div class="gc-start-1 gc-end-13 mt-1">
-					<a class="link-navigation" href="index.html">Home</a>
-					<a class="link-navigation" href="research.html">Research</a>
-					<a class="link-navigation" href="publications.html">Publications</a>
-					<a class="link-navigation" href="teaching.html">Teaching</a>
-					<a class="link-navigation" href="resources.html">Resources</a>
-					<a class="link-navigation" href="people.html">People</a>
-					<a class="link-navigation active" href="positions.html">Positions</a>
-					<a class="link-navigation" href="contact.html">Contact</a>
-				</div>
-			</div>
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<header class="site-header">
+		<div class="wrap">
+			<a class="brand" href="index.html">
+				<span class="brand-name">Auxetics <span>LAB</span></span>
+				<span class="brand-sub">Griffith University</span>
+			</a>
+			<nav class="site-nav" aria-label="Main">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="research.html">Research</a></li>
+					<li><a href="publications.html">Publications</a></li>
+					<li><a href="teaching.html">Teaching</a></li>
+					<li><a href="resources.html">Resources</a></li>
+					<li><a href="people.html">People</a></li>
+					<li><a href="positions.html" aria-current="page">Positions<span class="nav-indicator" aria-hidden="true"></span></a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
 	</header>
-	<main class="main-content">
-		<div class="content">
-			<div class="grid">
-				<div class="gc-start-1 gc-end-13">
-					<p class="mt-0"><b>NOTE.</b> Currently, there are no vacancies for PhD, post-doc, or Research Fellow positions. Only self-funded Master's and PhD students are considered.</p>
-				</div>
-				<div class="gc-start-1 gc-end-13 text-size-3  mt-2 text-serif text-color-red">
-					PhD Applications (open for new recruitment)
-				</div>
 
-				<div class="gc-start-1 gc-end-13">
-					In order to apply, please send an email (limited to 150 words max) titled "PhD application (auxeticslab)"; in
-					addition, please provide the following items:
-					<ul class="bullets mt-0">
-						<li>CV,</li>
+	<main id="main">
+		<div class="wrap">
+			<div class="page-head">
+				<h1>Positions</h1>
+				<p class="note" style="font-size:var(--size-base);color:var(--ink)"><strong>Note.</strong> Currently, there are no vacancies for PhD, post-doc, or Research Fellow positions. Only self-funded Master's and PhD students are considered.</p>
+			</div>
+
+			<section class="section">
+				<h2>PhD applications</h2>
+				<div class="section-body">
+					<p>Open for new recruitment. To apply, please send an email (150 words maximum) titled &ldquo;PhD application (auxeticslab)&rdquo; and include:</p>
+					<ul>
+						<li>your CV,</li>
 						<li>transcripts (Bachelor's and Master's),</li>
-						<li>the topic (metamaterials or auxetics), </li>
+						<li>the topic (metamaterials or auxetics),</li>
 						<li>your expertise in computational/continuum mechanics or machine learning, and</li>
-						<li>one best publication.</li>
+						<li>your one best publication.</li>
 					</ul>
 				</div>
+			</section>
 
-				<div class="gc-start-1 gc-end-13 text-size-2 mt-1 text-serif text-color-red">
-					Mandatory Requirements
-				</div>
-				<div class="gc-start-1 gc-end-13">
-					The minimum eligibility requirements are:
-					<ul class="bullets mt-0">
-												<li>
-							<p class="text-weight-bold" style="border: 2px solid #b00020; background-color: #fff3f3; padding: 0.75rem;">Most be from a non-sanctioned country (e.g., applicants from <span class="text-weight-bold" style="text-decoration: underline;">Iran</span> are not accepted).</p>
-						</li>
-						<li>
-							<p class="text-weight-bold">First-class honours or equivalent</p>
-						</li>
-						<li>
-							<p class="text-weight-bold">Three peer-reviewed journal publications (preferably as the first-author) </p>
-						</li>
+			<section class="section">
+				<h2>Mandatory requirements</h2>
+				<div class="section-body">
+					<p>The minimum eligibility requirements are:</p>
+					<ul>
+						<li><strong>Must be from a non-sanctioned country (e.g., applicants from Iran are not accepted),</strong></li>
+						<li>first-class honours or equivalent, and</li>
+						<li>three peer-reviewed journal publications (preferably as the first author).</li>
 					</ul>
-
-					<div class="gc-start-1 gc-end-13 text-size-2 mt-1 text-serif text-color-red">
-						Desired Skills
-					</div>
-					<div class="gc-start-1 gc-end-13">
-						We actively look for talented PhD students; a suitable topic can be defined according to any of the following skills:
-						<ul class="bullets mt-0">
-							<li>
-								<p class="text-weight-bold">Classic/Generalised Continuum Mechanics</p>
-
-							</li>
-							<li>
-								<p class="text-weight-bold">Computational Mechanics</p>
-							</li>
-
-
-						</ul>
-
-					</div>
-
-
-
-					<div class="gc-start-1 gc-end-13 text-size-2 mt-1 text-serif text-color-red">
-						Topics for Collaborative Research
-					</div>
-					<div class="gc-start-1 gc-end-13">
-						Currently, the following topics are available:
-						<ul class="bullets mt-0">
-							<li>
-								<p class="text-weight-bold">Multi-layered semi-auxetics for Energy-absorbing applications</p>
-								<p>Micromechanical models are considered in conjunction with computational techniques and experimental
-									validation. Developing new continuum mechanical models are also of interest.</p>
-							</li>
-							<!-- <li>
-						<p class="text-weight-bold">Hygro-thermal Modelling of CLT Timber Structures</p>
-						<p>Micromechanical models are considered in conjunction with computational techniques and experimental
-							validation. Developing new continuum mechanical models are also of interest.</p>
-					</li> -->
-							<li>
-								<p class="text-weight-bold">Modelling Fibre-reinforced Composites</p>
-								<p>Micromechanical models are considered in conjunction with computational techniques and experimental
-									validation. Developing new continuum mechanical models are also of interest.</p>
-							</li>
-						</ul>
-
-					</div>
-
 				</div>
+			</section>
 
+			<section class="section">
+				<h2>Desired skills</h2>
+				<div class="section-body">
+					<p>We actively look for talented PhD students; a suitable topic can be defined according to any of the following skills:</p>
+					<ul>
+						<li>Classic/generalised continuum mechanics</li>
+						<li>Computational mechanics</li>
+					</ul>
+				</div>
+			</section>
 
+			<section class="section">
+				<h2>Topics for collaborative research</h2>
+				<div class="section-body">
+					<p>Currently, the following topics are available:</p>
+					<div class="course" style="margin-top:20px">
+						<h3>Multi-layered semi-auxetics for energy-absorbing applications</h3>
+						<p>Micromechanical models are considered in conjunction with computational techniques and experimental validation. Developing new continuum mechanical models is also of interest.</p>
+					</div>
+					<div class="course" style="margin-top:20px">
+						<h3>Modelling fibre-reinforced composites</h3>
+						<p>Micromechanical models are considered in conjunction with computational techniques and experimental validation. Developing new continuum mechanical models is also of interest.</p>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
 
+	<footer class="site-footer" id="site-footer">
+		<div class="wrap">
+			<div>
+				<p><strong>Auxetics LAB</strong></p>
+				<p>Mechanical Engineering and Industrial Design</p>
+				<p><a href="https://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment" target="_blank" rel="noopener">School of Engineering and Built Environment</a></p>
+				<p><a href="https://www.griffith.edu.au/" target="_blank" rel="noopener">Griffith University</a>, Gold Coast QLD, Australia</p>
+			</div>
+			<div>
+				<p>&copy; 2022&ndash;2026 Auxetics LAB. All rights reserved.</p>
+				<p><a href="contact.html#privacy">Privacy statement and disclaimer</a></p>
 			</div>
 		</div>
-
-
-		<div id="footer-container"></div>
-	</main>
+	</footer>
 </body>
 
 </html>
