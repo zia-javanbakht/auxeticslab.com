@@ -28,6 +28,7 @@
 	--bg: #ffffff;
 	--bg-soft: #f7f7f8;
 	--accent: #b42323;
+	--accent-soft: #fdf2f2;
 
 	/* Type */
 	--font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -451,6 +452,13 @@ main {
 	background: var(--bg-soft);
 	border-left: 3px solid var(--accent);
 	border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.note.important {
+	background: var(--accent-soft);
+	border: 2px solid var(--accent);
+	border-radius: var(--radius);
+	font-weight: 600;
 }
 
 .more {
