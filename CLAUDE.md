@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a static academic website for the Auxetics Lab at Griffith University. The site is hosted on DigitalOcean and serves as the lab's online presence, showcasing research, team members, publications, and contact information.
+This is a static academic website for the Auxetics Lab at Griffith University. The site is hosted on GitHub Pages and serves as the lab's online presence, showcasing research, team members, publications, and contact information.
 
 ## Architecture
 
@@ -20,11 +20,7 @@ Plain static HTML with one shared stylesheet; no JavaScript code and no build st
 ## Common Development Tasks
 
 ### Deployment
-The website is deployed on DigitalOcean using a LEMP stack. To update the live site:
-```bash
-git pull origin main
-```
-(Run from `/var/www/auxeticslab.com/html` on the server)
+The site is published by GitHub Pages from the `main` branch. Merging a pull request into `main` deploys it live within about a minute; there is no server to update and no build step. Work on a branch and open a pull request so changes can be reviewed before they go live.
 
 ### Content Updates
 - **Team Members**: Update `/people.html` and add/update photos in `/assets/images/`
@@ -63,6 +59,5 @@ Key sections:
 
 ## Domain and Hosting
 
-- Domain: `www.auxeticslab.com` (configured via CNAME file)
-- Hosted on DigitalOcean droplet with LEMP stack
-- Static site deployment via Git repository sync
+- Domain: `www.auxeticslab.com` (configured via the `CNAME` file, which GitHub Pages reads; do not delete it)
+- Hosted on GitHub Pages, deployed automatically from `main`
