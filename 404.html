@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Page not found | Auxetics LAB</title>
+	<meta name="robots" content="noindex">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="preload" href="/assets/fonts/Inter-roman.var.woff2?v=3.19" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="/assets/styles.css">
+	<!-- Wait for the whole page before showing it, so a page change never reveals a half-drawn page -->
+	<link rel="expect" href="#site-footer" blocking="render">
+	<!-- Browsers that support it load a page in the background when a link is hovered, so it opens instantly -->
+	<script type="speculationrules">
+		{"prerender": [{"where": {"href_matches": "/*"}, "eagerness": "moderate"}], "prefetch": [{"where": {"href_matches": "/*"}, "eagerness": "moderate"}]}
+	</script>
+</head>
+
+<body>
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<header class="site-header">
+		<div class="wrap">
+			<a class="brand" href="/">
+				<span class="brand-name">Auxetics <span>LAB</span></span>
+				<span class="brand-sub">Griffith University</span>
+			</a>
+			<nav class="site-nav" aria-label="Main">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/research.html">Research</a></li>
+					<li><a href="/publications.html">Publications</a></li>
+					<li><a href="/teaching.html">Teaching</a></li>
+					<li><a href="/resources.html">Resources</a></li>
+					<li><a href="/people.html">People</a></li>
+					<li><a href="/positions.html">Positions</a></li>
+					<li><a href="/contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="main">
+		<div class="wrap">
+			<div class="page-head">
+				<h1>Page not found</h1>
+				<p>The page you were looking for does not exist or has moved. Try the <a href="/">home page</a> or one of the sections in the menu above.</p>
+			</div>
+		</div>
+	</main>
+
+	<footer class="site-footer" id="site-footer">
+		<div class="wrap">
+			<div>
+				<p><strong>Auxetics LAB</strong></p>
+				<p>Mechanical Engineering and Industrial Design</p>
+				<p><a href="https://www.griffith.edu.au/griffith-sciences/school-engineering-built-environment" target="_blank" rel="noopener">School of Engineering and Built Environment</a></p>
+				<p><a href="https://www.griffith.edu.au/" target="_blank" rel="noopener">Griffith University</a>, Gold Coast QLD, Australia</p>
+			</div>
+			<div>
+				<p>&copy; 2022&ndash;2026 Auxetics LAB. All rights reserved.</p>
+				<p><a href="/contact.html#privacy">Privacy statement and disclaimer</a></p>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
